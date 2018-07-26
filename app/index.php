@@ -28,7 +28,7 @@
 </head>
 <body>
     
-    <h1>Aca empieza la magiaa</h1>
+    <h1>Hello World!</h1>
     <!-- End Footer -->
      <script src="temp/scripts/App.js"></script>
    
