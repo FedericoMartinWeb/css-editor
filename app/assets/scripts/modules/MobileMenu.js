@@ -1,36 +1,56 @@
-import $ from 'jquery';
 
 class MobileMenu{
+
     constructor(){
-        this.siteHeader = $('.site-header');
-        this.menuIcon = $('.site-header__menu-icon');
-        this.menuContent = $('.site-header__menu-content')
+        this.modifi = document.querySelector('.modifi');
+        this.slider = document.querySelector('.slider');
+        this.contador = document.querySelector('.contador');
+        this.color = document.querySelector('.color');
+        this.blur = document.querySelector('.blur');
+        this.propbutton = document.querySelector('.propbutton');
+        this.props = document.querySelector('.props');
         this.events();
-        this.scroll();
-        console.log("Dale");
     }
     
     events(){
-        this.menuIcon.click(this.toggleTheMenu.bind(this));
-    }
-
-    scroll(){
-        $(window).scroll(function() {    
-            var scroll = $(window).scrollTop();
-            var winVH = $(window).height();
-            if (scroll >= winVH) {
-                $(".goup").addClass("showup");
-            } else {
-                $(".goup").removeClass("showup");
-            }
-        });
+        this.slider.addEventListener('input', this.spacing.bind(this));
+        this.color.addEventListener('input', this.changeColor.bind(this));
+        this.blur.addEventListener('input', this.addBlur.bind(this));
+        this.propbutton.addEventListener('click', this.callCss.bind(this));
     }
     
-    toggleTheMenu(){
-        this.menuContent.toggleClass('site-header__menu-content--is-visible');
-        this.siteHeader.toggleClass('site-header--is-expanded');
-        this.menuIcon.toggleClass('site-header__menu-icon--close-x');
+    spacing(){
+        this.sliderval = this.slider.value;
+        this.contador.innerHTML = this.sliderval;
+        this.modifi.style.padding = this.sliderval + 'px';
     }
+
+    changeColor(){
+        this.colorval = this.color.value;
+        this.modifi.style.backgroundColor = this.colorval;
+    }
+
+    addBlur(){
+        this.blurval = this.blur.value;
+        this.modifi.style.filter = 'blur(' +  this.blurval  + 'px)';
+    }
+
+    callCss(){
+        this.attrstyle = this.modifi.getAttribute('style');
+        this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
+        console.log(typeof this.attrstyle);
+    }
+
 }
 
 export default MobileMenu;
+
+// document.querySelector('.button').addEventListener('click', function(){
+//     var valores = document.querySelector('.texto').value;
+//     if (valores){
+//         document.querySelector('.parrafo').innerHTML = valores;
+//     } else {
+//         valores = '';
+//     }
+//     document.querySelector('.texto').value = '';
+// });
