@@ -1,7 +1,5 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch'),
-// Paquete especifico de browser-sync
-browserSync = require('browser-sync').create();
+watch = require('gulp-watch');
 
 gulp.task('html', function(){
    console.log("HTML"); 
