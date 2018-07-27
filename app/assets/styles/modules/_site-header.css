@@ -1,0 +1,22 @@
+.site-header{
+	width: 100vw;
+	height: 40px;
+	background-color: green;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+
+	&__title{
+		margin: 0;
+		padding: 0;
+		color: red;
+	}
+}
