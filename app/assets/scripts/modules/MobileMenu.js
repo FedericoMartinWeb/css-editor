@@ -32,25 +32,27 @@ class MobileMenu{
 
     addBlur(){
         this.blurval = this.blur.value;
-        this.modifi.style.filter = 'blur(' +  this.blurval  + 'px)';
+        if(this.blurval == 0) { alert('0000') } else {
+            this.modifi.style.filter = 'blur(' +  this.blurval  + 'px)';
+        }
     }
 
     callCss(){
+        
         this.attrstyle = this.modifi.getAttribute('style');
-        this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
-        console.log(typeof this.attrstyle);
+        
+        if(this.attrstyle !== null){
+            this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
+            this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
+            this.replace = this.attrstyle.replace(this.regularExpression, ';<br />');
+            if(this.regularExpression.test(this.attrstyle) === true){
+                this.props.innerHTML = this.replace;
+            }
+        }else{
+            this.props.innerHTML = 'nothing to show here mate';
+        }
     }
 
 }
 
 export default MobileMenu;
-
-// document.querySelector('.button').addEventListener('click', function(){
-//     var valores = document.querySelector('.texto').value;
-//     if (valores){
-//         document.querySelector('.parrafo').innerHTML = valores;
-//     } else {
-//         valores = '';
-//     }
-//     document.querySelector('.texto').value = '';
-// });

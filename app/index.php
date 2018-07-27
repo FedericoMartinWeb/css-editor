@@ -119,7 +119,7 @@
             height: 200px;
             width: 500px;
             background-color: red;
-            color: #000;
+            color: #fff;
         }
 
     </style>

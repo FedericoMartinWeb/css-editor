@@ -89,8 +89,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -134,14 +132,28 @@ var MobileMenu = function () {
         key: 'addBlur',
         value: function addBlur() {
             this.blurval = this.blur.value;
-            this.modifi.style.filter = 'blur(' + this.blurval + 'px)';
+            if (this.blurval == 0) {
+                alert('0000');
+            } else {
+                this.modifi.style.filter = 'blur(' + this.blurval + 'px)';
+            }
         }
     }, {
         key: 'callCss',
         value: function callCss() {
+
             this.attrstyle = this.modifi.getAttribute('style');
-            this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
-            console.log(_typeof(this.attrstyle));
+
+            if (this.attrstyle !== null) {
+                this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
+                this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
+                this.replace = this.attrstyle.replace(this.regularExpression, ';<br />');
+                if (this.regularExpression.test(this.attrstyle) === true) {
+                    this.props.innerHTML = this.replace;
+                }
+            } else {
+                this.props.innerHTML = 'nothing to show here mate';
+            }
         }
     }]);
 
@@ -149,16 +161,6 @@ var MobileMenu = function () {
 }();
 
 exports.default = MobileMenu;
-
-// document.querySelector('.button').addEventListener('click', function(){
-//     var valores = document.querySelector('.texto').value;
-//     if (valores){
-//         document.querySelector('.parrafo').innerHTML = valores;
-//     } else {
-//         valores = '';
-//     }
-//     document.querySelector('.texto').value = '';
-// });
 
 /***/ })
 /******/ ]);
