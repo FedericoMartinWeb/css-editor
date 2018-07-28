@@ -52,10 +52,12 @@
             <div class="items">asdas</div>
             <div class="items">asdas</div>
             <div class="items">asdas</div>
+            <div class="items">asdas</div>
+            <div class="items">asdas</div>
         </aside>
 
-        <article class="main-wrapper__img">
-            <img src="assets/images/dog.jpg" alt="">
+        <article class="main-wrapper__center">
+            <img src="assets/images/dog.jpg" alt="" class="main-wrapper__img">
         </article>
     </main>
 
