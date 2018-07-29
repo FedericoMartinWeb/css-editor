@@ -35,6 +35,8 @@
 
     <main class="main-wrapper">
         <aside class="main-wrapper__aside">
+            <div class="items">size</div>
+            <input type="range" class="slider">
             <div class="items">asdas</div>
             <div class="items">asdas</div>
             <div class="items">asdas</div>
@@ -48,16 +50,13 @@
             <div class="items">asdas</div>
             <div class="items">asdas</div>
             <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
+            Photo by Trent Erwin on Unsplash
         </aside>
 
         <article class="main-wrapper__center">
-            <img src="assets/images/dog.jpg" alt="" class="main-wrapper__img">
+            <div class="main-wrapper__center__img">
+                <img src="assets/images/preview_img.jpg" alt="" class="main-wrapper__center__img--core">
+            </div>
         </article>
     </main>
 

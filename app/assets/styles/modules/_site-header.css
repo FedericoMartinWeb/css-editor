@@ -1,7 +1,7 @@
 .site-header{
 	width: 100vw;
-	height: 40px;
-	background-color: green;
+	height: 50px;
+	background-color: #184061;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -14,6 +14,6 @@
 	&__title{
 		margin: 0;
 		padding: 0;
-		color: red;
+		color: #fff;
 	}
 }
