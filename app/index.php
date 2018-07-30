@@ -13,10 +13,8 @@
     <link rel="stylesheet" href="../app/temp/styles/styles.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
     
     <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -29,14 +27,26 @@
     
     <!-- Header Start -->
     <header class="site-header">
-        <h1 class="site-header__title">Css Editor!</h1>
+       <div class="site-header__menu-icon">
+           <div class="site-header__menu-icon__middle"></div>
+       </div>
+        <h1 class="site-header__title">Css &lt;img&gt; Editor</h1>
     </header>
     <!-- Header End -->
 
     <main class="main-wrapper">
         <aside class="main-wrapper__aside">
-            <div class="items">size</div>
-            <input type="range" class="slider">
+            <div class="main-wrapper__aside--item">
+                <div class="main-wrapper__title">Border-radius</div>
+                <input type="range" class="slider">
+                <div class="main-wrapper__number">12</div>
+            </div>
+            <div class="main-wrapper__aside--item">
+                <div class="main-wrapper__title">Border-radius</div>
+                <input type="range" class="slider">
+                <div class="main-wrapper__number">12</div>
+            </div>
+<!--
             <div class="items">asdas</div>
             <div class="items">asdas</div>
             <div class="items">asdas</div>
@@ -51,6 +61,7 @@
             <div class="items">asdas</div>
             <div class="items">asdas</div>
             Photo by Trent Erwin on Unsplash
+-->
         </aside>
 
         <article class="main-wrapper__center">
@@ -78,7 +89,7 @@
     <input type="submit" class="propbutton" value="mostrar css">
      -->
     <!-- End Footer -->
-     <!-- <script src="temp/scripts/App.js"></script> -->
+    <script src="temp/scripts/App.js"></script>
    
 </body>
 </html>
