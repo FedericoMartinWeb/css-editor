@@ -650,6 +650,11 @@ a{
             padding: 1rem .2rem 1rem .2rem;
         }
 
+.main-wrapper__aside--item--file{
+                background-color: red;
+                padding: 10px;
+            }
+
 @media only screen and (min-width: 576px){
 
 .main-wrapper__aside--item{
@@ -781,6 +786,10 @@ a{
         margin-bottom: 10px;
         -webkit-transition: all .3s ease-out;
         transition: all .3s ease-out;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
     }
 
 @media only screen and (min-width: 576px){
@@ -913,3 +922,17 @@ input[type=range].slider:focus::-ms-fill-upper {
 .slider--hide{
     display: none;
 }
+
+.button{
+	cursor: pointer;
+	background-color: rgb(72, 77, 77);
+	color: #fff;
+	padding: 15px;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	border-color: transparent;
+}
+
+.button:hover{
+		border-color: #ff435f;
+	}

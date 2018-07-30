@@ -25,6 +25,11 @@
         &--item{
             position: relative;
             padding: 1rem .2rem 1rem .2rem;
+
+            &--file{
+                background-color: red;
+                padding: 10px;
+            }
             
             @mixin atSmall{
                 padding: 1rem 2.5rem 1rem 2.5rem;
@@ -117,6 +122,7 @@
         cursor: pointer;
         margin-bottom: 10px;
         transition: all .3s ease-out;
+        user-select: none;
         
         @mixin atSmall{
             margin-bottom: 6px;

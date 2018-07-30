@@ -60,171 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _CloseAside = __webpack_require__(1);
-
-var _CloseAside2 = _interopRequireDefault(_CloseAside);
-
-var _Items = __webpack_require__(2);
-
-var _Items2 = _interopRequireDefault(_Items);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//var mobile = new MobileMenu();
-//import MobileMenu from './modules/MobileMenu';
-var close = new _CloseAside2.default();
-var item = new _Items2.default();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var CloseAside = function () {
-    function CloseAside() {
-        _classCallCheck(this, CloseAside);
-
-        this.icon = document.querySelector('.site-header__menu-icon');
-        this.aside = document.querySelector('.main-wrapper__aside');
-        this.center = document.querySelector('.main-wrapper__center');
-        this.events();
-    }
-
-    _createClass(CloseAside, [{
-        key: 'events',
-        value: function events() {
-            this.icon.addEventListener('click', this.closeX.bind(this));
-        }
-    }, {
-        key: 'closeX',
-        value: function closeX() {
-            this.icon.classList.toggle('site-header__menu-icon--close-x');
-            this.aside.classList.toggle('main-wrapper__aside--hide');
-            this.center.classList.toggle('main-wrapper__center--expand');
-        }
-    }]);
-
-    return CloseAside;
-}();
-
-exports.default = CloseAside;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(3);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Items = function () {
-    function Items() {
-        _classCallCheck(this, Items);
-
-        this.title = (0, _jquery2.default)('.main-wrapper__title');
-        this.slider = (0, _jquery2.default)('.slider');
-        this.number = (0, _jquery2.default)('.main-wrapper__number');
-        this.events();
-    }
-
-    _createClass(Items, [{
-        key: 'events',
-        value: function events() {
-            //        this.title.addEventListener('click', this.triangleAnimation.bind(this));
-            this.title.on('click', this.triangleAnimation);
-            this.title.on('click', this.hideSlider.bind(this));
-            //        this.title.on('click', this.hideNumber);
-        }
-    }, {
-        key: 'triangleAnimation',
-        value: function triangleAnimation() {
-            (0, _jquery2.default)(this).toggleClass('main-wrapper__title--animation');
-            //        this.removeClass('main-wrapper__title');
-        }
-    }, {
-        key: 'hideSlider',
-        value: function hideSlider() {
-            this.slider.toggleClass('slider--hide');
-        }
-
-        //    hideNumber(){
-        //        $(this).toggleClass('main-wrapper__number--hide');
-        //    }
-
-    }]);
-
-    return Items;
-}();
-
-exports.default = Items;
-
-//class Items{
-//
-//    constructor(){
-//        this.title = document.querySelector('.main-wrapper__title');
-//        this.slider = document.querySelector('.slider');
-//        this.number = document.querySelector('.main-wrapper__number');
-//        this.events();
-//    }
-//    
-//    events(){
-//        this.title.addEventListener('click', this.triangleAnimation.bind(this));
-//        this.title.addEventListener('click', this.hideSlider.bind(this));
-//        this.title.addEventListener('click', this.hideNumber.bind(this));
-//    }
-//    
-//    triangleAnimation(){
-//        this.title.classList.toggle('main-wrapper__title--animation');
-////        e.target.classList.toggle('main-wrapper__title--animation');
-//    }
-//    
-//    hideSlider(){
-//        this.slider.classList.toggle('slider--hide');
-//    }
-//    
-//    hideNumber(){
-//        this.number.classList.toggle('main-wrapper__number--hide');
-//    }
-//
-//}
-//
-//export default Items;
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10593,6 +10433,185 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _CloseAside = __webpack_require__(2);
+
+var _CloseAside2 = _interopRequireDefault(_CloseAside);
+
+var _Items = __webpack_require__(3);
+
+var _Items2 = _interopRequireDefault(_Items);
+
+var _UploadImage = __webpack_require__(4);
+
+var _UploadImage2 = _interopRequireDefault(_UploadImage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//var mobile = new MobileMenu();
+var close = new _CloseAside2.default(); //import MobileMenu from './modules/MobileMenu';
+
+var item = new _Items2.default();
+var image = new _UploadImage2.default();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CloseAside = function () {
+    function CloseAside() {
+        _classCallCheck(this, CloseAside);
+
+        this.icon = (0, _jquery2.default)('.site-header__menu-icon');
+        this.aside = (0, _jquery2.default)('.main-wrapper__aside');
+        this.center = (0, _jquery2.default)('.main-wrapper__center');
+        this.events();
+    }
+
+    _createClass(CloseAside, [{
+        key: 'events',
+        value: function events() {
+            this.icon.on('click', this.closeX.bind(this));
+        }
+    }, {
+        key: 'closeX',
+        value: function closeX() {
+            this.icon.toggleClass('site-header__menu-icon--close-x');
+            this.aside.toggleClass('main-wrapper__aside--hide');
+            this.center.toggleClass('main-wrapper__center--expand');
+        }
+    }]);
+
+    return CloseAside;
+}();
+
+exports.default = CloseAside;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Items = function () {
+    function Items() {
+        _classCallCheck(this, Items);
+
+        this.title = (0, _jquery2.default)('.main-wrapper__title');
+        this.events();
+    }
+
+    _createClass(Items, [{
+        key: 'events',
+        value: function events() {
+            this.title.on('click', this.triangleAnimation);
+        }
+    }, {
+        key: 'triangleAnimation',
+        value: function triangleAnimation() {
+            (0, _jquery2.default)(this).toggleClass('main-wrapper__title--animation');
+            (0, _jquery2.default)(this).next().toggleClass('slider--hide');
+            (0, _jquery2.default)(this).nextAll().eq(1).toggleClass('main-wrapper__number--hide');
+        }
+    }]);
+
+    return Items;
+}();
+
+exports.default = Items;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var UploadImage = function () {
+    function UploadImage() {
+        _classCallCheck(this, UploadImage);
+
+        this.CallImg();
+    }
+
+    _createClass(UploadImage, [{
+        key: 'CallImg',
+        value: function CallImg() {
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        (0, _jquery2.default)('.main-wrapper__center__img--core').attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            (0, _jquery2.default)("#uFile").on('change', function () {
+                readURL(this);
+            });
+        }
+    }]);
+
+    return UploadImage;
+}();
+
+exports.default = UploadImage;
 
 /***/ })
 /******/ ]);

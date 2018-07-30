@@ -1,0 +1,12 @@
+.button{
+	cursor: pointer;
+	background-color: rgb(72, 77, 77);
+	color: #fff;
+	padding: 15px;
+	transition: all .3s ease-out;
+	border-color: transparent;
+
+	&:hover{
+		border-color: #ff435f;
+	}
+}

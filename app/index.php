@@ -37,6 +37,12 @@
     <main class="main-wrapper">
         <aside class="main-wrapper__aside">
             <div class="main-wrapper__aside--item">
+                <input type="file" class="main-wrapper__aside--item--file" id="uFile">
+            </div>
+            <div class="main-wrapper__aside--item">
+                <input type="button" class="button" value="Generate Css!">
+            </div>
+            <div class="main-wrapper__aside--item">
                 <div class="main-wrapper__title">Border-radius</div>
                 <input type="range" class="slider">
                 <div class="main-wrapper__number">12</div>
@@ -46,22 +52,11 @@
                 <input type="range" class="slider">
                 <div class="main-wrapper__number">12</div>
             </div>
-<!--
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            <div class="items">asdas</div>
-            Photo by Trent Erwin on Unsplash
--->
+            <div class="main-wrapper__aside--item">
+                <div class="main-wrapper__title">Border-radius</div>
+                <input type="range" class="slider">
+                <div class="main-wrapper__number">12</div>
+            </div>
         </aside>
 
         <article class="main-wrapper__center">
