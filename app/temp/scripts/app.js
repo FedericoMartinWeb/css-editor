@@ -10441,28 +10441,200 @@ return jQuery;
 "use strict";
 
 
-var _CloseAside = __webpack_require__(2);
+var _Main = __webpack_require__(2);
+
+var _Main2 = _interopRequireDefault(_Main);
+
+var _CloseAside = __webpack_require__(3);
 
 var _CloseAside2 = _interopRequireDefault(_CloseAside);
 
-var _Items = __webpack_require__(3);
+var _Items = __webpack_require__(4);
 
 var _Items2 = _interopRequireDefault(_Items);
 
-var _UploadImage = __webpack_require__(4);
+var _UploadImage = __webpack_require__(5);
 
 var _UploadImage2 = _interopRequireDefault(_UploadImage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//var mobile = new MobileMenu();
-var close = new _CloseAside2.default(); //import MobileMenu from './modules/MobileMenu';
-
+var close = new _CloseAside2.default();
 var item = new _Items2.default();
 var image = new _UploadImage2.default();
+var main = new _Main2.default();
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Main = function () {
+    function Main() {
+        _classCallCheck(this, Main);
+
+        this.img = (0, _jquery2.default)('#img');
+        this.border = (0, _jquery2.default)('#border input');
+        this.sepia = (0, _jquery2.default)('#sepia input');
+        this.blur = (0, _jquery2.default)('#blur input');
+        this.bright = (0, _jquery2.default)('#bright input');
+        this.events();
+    }
+
+    _createClass(Main, [{
+        key: 'pasteFilter',
+        value: function pasteFilter() {}
+    }, {
+        key: 'events',
+        value: function events() {
+            this.border.on('input', this.callBorder.bind(this));
+            this.sepia.on('input', this.callSepia.bind(this));
+            this.blur.on('input', this.callBlur.bind(this));
+            this.bright.on('input', this.callBright.bind(this));
+            // this.propbutton.addEventListener('click', this.callCss.bind(this));
+        }
+    }, {
+        key: 'callBorder',
+        value: function callBorder() {
+            this.borderval = this.border.val();
+            this.border.next().html(this.borderval);
+            this.img.css('border-radius', this.borderval + 'px');
+        }
+    }, {
+        key: 'callSepia',
+        value: function callSepia() {
+            this.sepiaval = this.sepia.val();
+            this.sepia.next().html(this.sepiaval);
+            this.img.css('filter', 'sepia(' + this.sepiaval + '%)');
+        }
+    }, {
+        key: 'callBlur',
+        value: function callBlur() {
+            this.blurval = this.blur.val();
+            this.blur.next().html(this.blurval);
+            this.img.css('filter', 'blur(' + this.blurval + 'px)');
+        }
+    }, {
+        key: 'callSepia',
+        value: function callSepia() {
+            this.sepiaval = this.sepia.val();
+            this.sepia.next().html(this.sepiaval);
+            this.img.css('filter', 'sepia(' + this.sepiaval + '%)');
+        }
+    }, {
+        key: 'callBright',
+        value: function callBright() {
+            this.brightval = this.bright.val();
+            this.bright.next().html(this.brightval);
+            this.img.css('filter', 'brightness(' + this.brightval + '%)');
+        }
+
+        // addBlur(){
+        //     this.blurval = this.blur.value;
+        //     if(this.blurval == 0) { alert('0000') } else {
+        //         this.modifi.style.filter = 'blur(' +  this.blurval  + 'px)';
+        //     }
+        // }
+
+        // callCss(){
+
+        //     this.attrstyle = this.modifi.getAttribute('style');
+
+        //     if(this.attrstyle !== null){
+        //         this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
+        //         this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
+        //         this.replace = this.attrstyle.replace(this.regularExpression, ';<br />');
+        //         if(this.regularExpression.test(this.attrstyle) === true){
+        //             this.props.innerHTML = this.replace;
+        //         }
+        //     }else{
+        //         this.props.innerHTML = 'nothing to show here mate';
+        //     }
+        // }
+
+    }]);
+
+    return Main;
+}();
+
+exports.default = Main;
+
+//class MobileMenu{
+//
+//    constructor(){
+//        this.modifi = document.querySelector('.modifi');
+//        this.slider = document.querySelector('.slider');
+//        this.contador = document.querySelector('.contador');
+//        this.color = document.querySelector('.color');
+//        this.blur = document.querySelector('.blur');
+//        this.propbutton = document.querySelector('.propbutton');
+//        this.props = document.querySelector('.props');
+//        this.events();
+//    }
+//    
+//    events(){
+//        this.slider.addEventListener('input', this.spacing.bind(this));
+//        this.color.addEventListener('input', this.changeColor.bind(this));
+//        this.blur.addEventListener('input', this.addBlur.bind(this));
+//        this.propbutton.addEventListener('click', this.callCss.bind(this));
+//    }
+//    
+//    spacing(){
+//        this.sliderval = this.slider.value;
+//        this.contador.innerHTML = this.sliderval;
+//        this.modifi.style.padding = this.sliderval + 'px';
+//    }
+//
+//    changeColor(){
+//        this.colorval = this.color.value;
+//        this.modifi.style.backgroundColor = this.colorval;
+//    }
+//
+//    addBlur(){
+//        this.blurval = this.blur.value;
+//        if(this.blurval == 0) { alert('0000') } else {
+//            this.modifi.style.filter = 'blur(' +  this.blurval  + 'px)';
+//        }
+//    }
+//
+//    callCss(){
+//        
+//        this.attrstyle = this.modifi.getAttribute('style');
+//        
+//        if(this.attrstyle !== null){
+//            this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
+//            this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
+//            this.replace = this.attrstyle.replace(this.regularExpression, ';<br />');
+//            if(this.regularExpression.test(this.attrstyle) === true){
+//                this.props.innerHTML = this.replace;
+//            }
+//        }else{
+//            this.props.innerHTML = 'nothing to show here mate';
+//        }
+//    }
+//
+//}
+//
+//export default MobileMenu;
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10512,7 +10684,7 @@ var CloseAside = function () {
 exports.default = CloseAside;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10560,7 +10732,7 @@ var Items = function () {
 exports.default = Items;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

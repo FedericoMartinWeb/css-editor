@@ -1,10 +1,15 @@
 .button{
+	font-family: 'Montserrat', sans-serif;
 	cursor: pointer;
 	background-color: rgb(72, 77, 77);
+	letter-spacing: 1px;
 	color: #fff;
 	padding: 15px;
+	width: 100%;
 	transition: all .3s ease-out;
-	border-color: transparent;
+	border:1px solid transparent;
+	text-align: center;
+	white-space: pre-wrap;
 
 	&:hover{
 		border-color: #ff435f;
