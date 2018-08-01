@@ -4,10 +4,11 @@ class Main{
 
    constructor(){
        this.img = $('#img');
+       this.filterinput = $('input[type=range].filters');
        this.border = $('#border input');
        this.sepia = $('#sepia input');
        this.blur = $('#blur input');
-       this.bright = $('#bright input');
+//       this.bright = $('#bright input');
        this.events();
    }
 
@@ -17,10 +18,8 @@ class Main{
    
    events(){
        this.border.on('input', this.callBorder.bind(this));
-       this.sepia.on('input', this.callSepia.bind(this));
-       this.blur.on('input', this.callBlur.bind(this));
-       this.bright.on('input', this.callBright.bind(this));
-       // this.propbutton.addEventListener('click', this.callCss.bind(this));
+       this.filterinput.on('input', this.filters.bind(this));
+//       this.blur.on('input', this.callBlur.bind(this));
    }
    
    callBorder(){
@@ -29,29 +28,24 @@ class Main{
        this.img.css('border-radius', this.borderval + 'px');
    }
 
-   callSepia(){
+   filters(){
        this.sepiaval = this.sepia.val();
-       this.sepia.next().html(this.sepiaval);
-       this.img.css('filter', 'sepia(' + this.sepiaval + '%)');
-   }
-
-   callBlur(){
        this.blurval = this.blur.val();
        this.blur.next().html(this.blurval);
-       this.img.css('filter', 'blur(' + this.blurval + 'px)');
+       this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px');
    }
 
-   callSepia(){
-       this.sepiaval = this.sepia.val();
-       this.sepia.next().html(this.sepiaval);
-       this.img.css('filter', 'sepia(' + this.sepiaval + '%)');
-   }
+//   callBlur(){
+//       this.blurval = this.blur.val();
+//       this.blur.next().html(this.blurval);
+//       this.img.css('filter', 'blur(' + this.blurval + 'px)');
+//   }
 
-   callBright(){
-       this.brightval = this.bright.val();
-       this.bright.next().html(this.brightval);
-       this.img.css('filter', 'brightness(' + this.brightval + '%)');
-   }
+//   callBright(){
+//       this.brightval = this.bright.val();
+//       this.bright.next().html(this.brightval);
+//       this.img.css('filter', 'brightness(' + this.brightval + '%)');
+//   }
 
    // addBlur(){
    //     this.blurval = this.blur.value;

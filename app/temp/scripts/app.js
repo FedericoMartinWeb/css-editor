@@ -10490,10 +10490,11 @@ var Main = function () {
         _classCallCheck(this, Main);
 
         this.img = (0, _jquery2.default)('#img');
+        this.filterinput = (0, _jquery2.default)('input[type=range].filters');
         this.border = (0, _jquery2.default)('#border input');
         this.sepia = (0, _jquery2.default)('#sepia input');
         this.blur = (0, _jquery2.default)('#blur input');
-        this.bright = (0, _jquery2.default)('#bright input');
+        //       this.bright = $('#bright input');
         this.events();
     }
 
@@ -10504,10 +10505,8 @@ var Main = function () {
         key: 'events',
         value: function events() {
             this.border.on('input', this.callBorder.bind(this));
-            this.sepia.on('input', this.callSepia.bind(this));
-            this.blur.on('input', this.callBlur.bind(this));
-            this.bright.on('input', this.callBright.bind(this));
-            // this.propbutton.addEventListener('click', this.callCss.bind(this));
+            this.filterinput.on('input', this.filters.bind(this));
+            //       this.blur.on('input', this.callBlur.bind(this));
         }
     }, {
         key: 'callBorder',
@@ -10517,33 +10516,25 @@ var Main = function () {
             this.img.css('border-radius', this.borderval + 'px');
         }
     }, {
-        key: 'callSepia',
-        value: function callSepia() {
+        key: 'filters',
+        value: function filters() {
             this.sepiaval = this.sepia.val();
-            this.sepia.next().html(this.sepiaval);
-            this.img.css('filter', 'sepia(' + this.sepiaval + '%)');
-        }
-    }, {
-        key: 'callBlur',
-        value: function callBlur() {
             this.blurval = this.blur.val();
             this.blur.next().html(this.blurval);
-            this.img.css('filter', 'blur(' + this.blurval + 'px)');
+            this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px');
         }
-    }, {
-        key: 'callSepia',
-        value: function callSepia() {
-            this.sepiaval = this.sepia.val();
-            this.sepia.next().html(this.sepiaval);
-            this.img.css('filter', 'sepia(' + this.sepiaval + '%)');
-        }
-    }, {
-        key: 'callBright',
-        value: function callBright() {
-            this.brightval = this.bright.val();
-            this.bright.next().html(this.brightval);
-            this.img.css('filter', 'brightness(' + this.brightval + '%)');
-        }
+
+        //   callBlur(){
+        //       this.blurval = this.blur.val();
+        //       this.blur.next().html(this.blurval);
+        //       this.img.css('filter', 'blur(' + this.blurval + 'px)');
+        //   }
+
+        //   callBright(){
+        //       this.brightval = this.bright.val();
+        //       this.bright.next().html(this.brightval);
+        //       this.img.css('filter', 'brightness(' + this.brightval + '%)');
+        //   }
 
         // addBlur(){
         //     this.blurval = this.blur.value;

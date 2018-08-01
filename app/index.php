@@ -37,7 +37,7 @@
     <main class="main-wrapper">
         <aside class="main-wrapper__aside">
             <div class="main-wrapper__aside--item">
-                <div class="main-wrapper__aside--item--wrapper-file ">
+                <div class="main-wrapper__aside--item--wrapper-file">
                     <span class="main-wrapper__aside--item--wrapper-file--title">Upload your image!</span>
                     <input type="file" class="main-wrapper__aside--item--wrapper-file--core" id="uFile">
                 </div>
@@ -52,17 +52,17 @@
             </div>
             <div class="main-wrapper__aside--item" id="sepia">
                 <div class="main-wrapper__title">Sepia</div>
-                <input type="range" class="slider" value="0" max="100">
+                <input type="range" class="slider filters" value="0" max="100">
                 <div class="main-wrapper__number">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="blur">
                 <div class="main-wrapper__title">Blur</div>
-                <input type="range" class="slider" value="0" max="10">
+                <input type="range" class="slider filters" value="0" max="10">
                 <div class="main-wrapper__number">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="bright">
                 <div class="main-wrapper__title">Brightness</div>
-                <input type="range" class="slider" value="100" max="100">
+                <input type="range" class="slider filters" value="100" max="100">
                 <div class="main-wrapper__number">0</div>
             </div>
         </aside>
