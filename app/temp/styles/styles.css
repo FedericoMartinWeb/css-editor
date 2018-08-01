@@ -503,9 +503,16 @@ a{
         top: 50%;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
-        left: 25px;
+        right: 25px;
         z-index: 10;
         cursor: pointer;
+    }
+
+@media only screen and (min-width: 576px){
+
+.site-header__menu-icon{
+            left: 25px
+    }
     }
 
 .site-header__menu-icon::before{
@@ -617,6 +624,7 @@ a{
 .main-wrapper{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
 
 }
 
@@ -631,8 +639,22 @@ a{
         -webkit-transition: all .3s ease-out;
         transition: all .3s ease-out;
         height: calc(100vh - 50px);
-		grid-column: 1 / 5;
+		grid-column: 9 / 13;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        overflow-y: scroll;
 	}
+
+@media only screen and (min-width: 576px){
+
+.main-wrapper__aside{
+            -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                    order: 1;
+            grid-column: 1 / 5
+	}
+    }
 
 @media only screen and (min-width: 992px){
 
@@ -715,7 +737,10 @@ a{
 		background-image: url('../../assets/images/black-paper.png');
         background-color: #343434;
 	    background-repeat: repeat;
-		grid-column: 5 / 13;
+		grid-column: 1 / 9;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
         width: 100%;
         height: calc(100vh - 50px);
         display: -webkit-box;
@@ -730,6 +755,16 @@ a{
         -webkit-transition: all .3s ease-out;
         transition: all .3s ease-out;
 	}
+
+@media only screen and (min-width: 576px){
+
+.main-wrapper__center{
+            -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                    order: 2;
+            grid-column: 5 / 13
+	}
+    }
 
 @media only screen and (min-width: 992px){
 
@@ -835,17 +870,23 @@ a{
     }
 
 .main-wrapper__title::before{
-            content: ' ';
-            display: block;
-            position: absolute;
-            left: 7px;
-            top: 18px;
-            border-style: solid;
-            border-width: 13px 13px 0 13px;
-            border-color: #ff435f transparent transparent transparent;
-            -webkit-transition: all .2s ease-out;
-            transition: all .2s ease-out;
+            display: none;
         }
+
+@media only screen and (min-width: 576px){
+            .main-wrapper__title::before{
+                content: ' ';
+                display: block;
+                position: absolute;
+                left: 7px;
+                top: 18px;
+                border-style: solid;
+                border-width: 13px 13px 0 13px;
+                border-color: #ff435f transparent transparent transparent;
+                -webkit-transition: all .2s ease-out;
+                transition: all .2s ease-out;
+            }
+    }
 
 .main-wrapper__title--animation::before{
                 top: 11px;

@@ -11,10 +11,6 @@ class Main{
 //       this.bright = $('#bright input');
        this.events();
    }
-
-   pasteFilter(){
-   	
-   }
    
    events(){
        this.border.on('input', this.callBorder.bind(this));
