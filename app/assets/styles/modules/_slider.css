@@ -1,7 +1,11 @@
 input[type=range].slider {
   -webkit-appearance: none;
   width: 100%;
-  margin: 7px 0;
+  margin: 10px 0 7px 0;
+
+  @mixin atSmall{
+    margin: 20px 0 7px 0;
+  }
 }
 
 input[type=range].slider:focus {

@@ -8,7 +8,8 @@ class Main{
        this.border = $('#border input');
        this.sepia = $('#sepia input');
        this.blur = $('#blur input');
-//       this.bright = $('#bright input');
+       this.bright = $('#bright input');
+       this.gray = $('#gray input');
        this.events();
    }
    
@@ -26,9 +27,18 @@ class Main{
 
    filters(){
        this.sepiaval = this.sepia.val();
+       this.sepia.next().html(this.sepiaval);
+       
        this.blurval = this.blur.val();
        this.blur.next().html(this.blurval);
-       this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px');
+
+       this.brightval = this.bright.val();
+       this.bright.next().html(this.brightval);
+
+       this.grayval = this.gray.val();
+       this.gray.next().html(this.grayval);
+
+       this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale('+ this.grayval +'%)');
    }
 
 //   callBlur(){

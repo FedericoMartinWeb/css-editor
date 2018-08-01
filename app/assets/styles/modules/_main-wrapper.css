@@ -33,6 +33,18 @@
         &--item{
             position: relative;
             padding: 1rem .2rem 1rem .2rem;
+
+            @mixin atSmall{
+                padding: .5rem 2.5rem 1rem 2.5rem;
+            }
+            
+            @mixin atMedium{
+                padding: 1rem 3rem 1rem 2.5rem;
+            }
+            
+            @mixin atLarge{
+                padding: 1rem 3.8rem 1rem 2.5rem;
+            }
             
             &--wrapper-file{
                 cursor: pointer;
@@ -68,24 +80,7 @@
                     right: 0;
                     top: 0;
                     bottom: 0;
-
-                   
                 }
-
-
-            }
-            
-            
-            @mixin atSmall{
-                padding: 1rem 2.5rem 1rem 2.5rem;
-            }
-            
-            @mixin atMedium{
-                padding: 1rem 3rem 1rem 2.5rem;
-            }
-            
-            @mixin atLarge{
-                padding: 1rem 3.8rem 1rem 2.5rem;
             }
         }
 	}
@@ -102,6 +97,39 @@
         justify-content: center;
         align-items: center;
         transition: all .3s ease-out;
+        position: relative;
+
+        &--modal{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #146645;
+            z-index: 3;
+            transform: scale(0);
+            transition: all .3s ease-out;
+            font-family: 'Source Code Pro', sans-serif;
+            padding: 2rem;
+            color: #fff;
+            transform-origin: left top;
+
+            &--show{
+                transform: scale(1);
+            }
+
+            @mixin atSmall{
+                width: 80%;
+            }
+
+            @mixin atMedium{
+                width: 60%;
+            }
+
+            @mixin atSmall{
+                width: 40%;
+            }
+        }
 		
         @mixin atSmall{
             order: 2;
@@ -127,6 +155,8 @@
             @mixin atSmall{
                 max-width: 90%;
                 height: 90%;
+                display: flex;
+                align-items: center;
             }
             
             &--core{
@@ -171,13 +201,9 @@
     
     &__title{
         cursor: pointer;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         transition: all .3s ease-out;
         user-select: none;
-        
-        @mixin atSmall{
-            margin-bottom: 6px;
-        }
 
         &::before{
             display: none;
@@ -189,11 +215,17 @@
                 display: block;
                 position: absolute;
                 left: 7px;
-                top: 18px;
+                top: 10px;
                 border-style: solid;
                 border-width: 13px 13px 0 13px;
                 border-color: #ff435f transparent transparent transparent;
                 transition: all .2s ease-out;
+            }
+        }
+
+        @mixin atMedium{
+            &::before{
+                top: 18px;
             }
         }
         
@@ -203,6 +235,14 @@
                 left: 15px;
                 border-width: 13px 0px 13px 13px;
                 border-color: transparent transparent transparent #ff435f;
+
+                @mixin atSmall{
+                    top: 3px;
+                }
+
+                @mixin atMedium{
+                    top: 11px;
+                }
             }
         }
     }

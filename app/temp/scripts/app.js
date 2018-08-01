@@ -10457,12 +10457,17 @@ var _UploadImage = __webpack_require__(5);
 
 var _UploadImage2 = _interopRequireDefault(_UploadImage);
 
+var _CssGene = __webpack_require__(6);
+
+var _CssGene2 = _interopRequireDefault(_CssGene);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var close = new _CloseAside2.default();
 var item = new _Items2.default();
 var image = new _UploadImage2.default();
 var main = new _Main2.default();
+var cssgene = new _CssGene2.default();
 
 /***/ }),
 /* 2 */
@@ -10494,14 +10499,12 @@ var Main = function () {
         this.border = (0, _jquery2.default)('#border input');
         this.sepia = (0, _jquery2.default)('#sepia input');
         this.blur = (0, _jquery2.default)('#blur input');
-        //       this.bright = $('#bright input');
+        this.bright = (0, _jquery2.default)('#bright input');
+        this.gray = (0, _jquery2.default)('#gray input');
         this.events();
     }
 
     _createClass(Main, [{
-        key: 'pasteFilter',
-        value: function pasteFilter() {}
-    }, {
         key: 'events',
         value: function events() {
             this.border.on('input', this.callBorder.bind(this));
@@ -10519,9 +10522,18 @@ var Main = function () {
         key: 'filters',
         value: function filters() {
             this.sepiaval = this.sepia.val();
+            this.sepia.next().html(this.sepiaval);
+
             this.blurval = this.blur.val();
             this.blur.next().html(this.blurval);
-            this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px');
+
+            this.brightval = this.bright.val();
+            this.bright.next().html(this.brightval);
+
+            this.grayval = this.gray.val();
+            this.gray.next().html(this.grayval);
+
+            this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale(' + this.grayval + '%)');
         }
 
         //   callBlur(){
@@ -10775,6 +10787,82 @@ var UploadImage = function () {
 }();
 
 exports.default = UploadImage;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CssGene = function () {
+    function CssGene() {
+        _classCallCheck(this, CssGene);
+
+        this.centermodal = (0, _jquery2.default)('.main-wrapper__center--modal');
+        this.css = (0, _jquery2.default)('#cssgene');
+        this.img = (0, _jquery2.default)('#img');
+        this.events();
+    }
+
+    _createClass(CssGene, [{
+        key: 'events',
+        value: function events() {
+            this.css.on('click', this.showCss.bind(this));
+        }
+    }, {
+        key: 'showCss',
+        value: function showCss() {
+            this.centermodal.toggleClass('main-wrapper__center--modal--show');
+            this.imageattr = this.img.attr('style');
+
+            if (this.imageattr !== undefined) {
+                this.centermodal.html("<p>" + this.imageattr + "</p>");
+                this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
+                this.replace = this.imageattr.replace(this.regularExpression, ';<br />');
+                if (this.regularExpression.test(this.imageattr)) {
+                    this.centermodal.html(this.replace);
+                }
+            } else {
+                this.centermodal.html("Nothing to show yet!");
+            }
+        }
+    }]);
+
+    return CssGene;
+}();
+
+//    callCss(){
+//        
+//        this.attrstyle = this.modifi.getAttribute('style');
+//        
+//        if(this.attrstyle !== null){
+//            this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
+//            this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
+//            this.replace = this.attrstyle.replace(this.regularExpression, ';<br />');
+//            if(this.regularExpression.test(this.attrstyle) === true){
+//                this.props.innerHTML = this.replace;
+//            }
+//        }else{
+//            this.props.innerHTML = 'nothing to show here mate';
+//        }
+//    }
+
+exports.default = CssGene;
 
 /***/ })
 /******/ ]);

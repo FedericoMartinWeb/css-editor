@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="main-wrapper__aside--item">
-                <input type="button" class="button" value="Generate Css!">
+                <input type="button" id="cssgene" class="button" value="Generate Css!">
             </div>
             <div class="main-wrapper__aside--item" id="border">
                 <div class="main-wrapper__title">Border-radius</div>
@@ -53,21 +53,28 @@
             <div class="main-wrapper__aside--item" id="sepia">
                 <div class="main-wrapper__title">Sepia</div>
                 <input type="range" class="slider filters" value="0" max="100">
+                <!-- step="0.01" -->
                 <div class="main-wrapper__number">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="blur">
                 <div class="main-wrapper__title">Blur</div>
-                <input type="range" class="slider filters" value="0" max="10">
+                <input type="range" class="slider filters" value="0" max="10" step="0.01">
                 <div class="main-wrapper__number">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="bright">
                 <div class="main-wrapper__title">Brightness</div>
-                <input type="range" class="slider filters" value="100" max="100">
+                <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">
+                <div class="main-wrapper__number">1</div>
+            </div>
+            <div class="main-wrapper__aside--item" id="gray">
+                <div class="main-wrapper__title">Grayscale</div>
+                <input type="range" class="slider filters" value="0" max="100">
                 <div class="main-wrapper__number">0</div>
             </div>
         </aside>
 
         <article class="main-wrapper__center">
+            <div class="main-wrapper__center--modal">sdfsdfsd</div>
             <div class="main-wrapper__center__img">
                 <img src="assets/images/preview_img.jpg" alt="userImg" class="main-wrapper__center__img--core" id="img">
             </div>
