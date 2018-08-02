@@ -10,6 +10,8 @@ class Main{
        this.blur = $('#blur input');
        this.bright = $('#bright input');
        this.gray = $('#gray input');
+       this.contrast = $('#contrast input');
+       this.hue = $('#hue input');
        this.events();
    }
    
@@ -45,7 +47,14 @@ class Main{
        this.grayval = this.gray.val();
        this.gray.next().html(this.grayval);
 
-       this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale('+ this.grayval +'%)');
+       this.contrastval = this.contrast.val();
+       this.contrast.next().html(this.contrastval);
+
+       this.hueval = this.hue.val();
+       this.hue.next().html(this.hueval);
+
+       this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale('+ this.grayval 
+        +'%) contrast(' + this.contrastval + ') hue-rotate(' + this.hueval + 'deg)');
    }
 }
 

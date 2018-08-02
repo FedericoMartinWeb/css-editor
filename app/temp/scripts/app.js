@@ -10506,6 +10506,8 @@ var Main = function () {
         this.blur = (0, _jquery2.default)('#blur input');
         this.bright = (0, _jquery2.default)('#bright input');
         this.gray = (0, _jquery2.default)('#gray input');
+        this.contrast = (0, _jquery2.default)('#contrast input');
+        this.hue = (0, _jquery2.default)('#hue input');
         this.events();
     }
 
@@ -10546,7 +10548,13 @@ var Main = function () {
             this.grayval = this.gray.val();
             this.gray.next().html(this.grayval);
 
-            this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale(' + this.grayval + '%)');
+            this.contrastval = this.contrast.val();
+            this.contrast.next().html(this.contrastval);
+
+            this.hueval = this.hue.val();
+            this.hue.next().html(this.hueval);
+
+            this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale(' + this.grayval + '%) contrast(' + this.contrastval + ') hue-rotate(' + this.hueval + 'deg)');
         }
     }]);
 

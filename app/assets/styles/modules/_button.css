@@ -4,14 +4,51 @@
 	background-color: rgb(72, 77, 77);
 	letter-spacing: 1px;
 	color: #fff;
-	padding: 15px;
+	padding: 8px;
 	width: 100%;
 	transition: all .3s ease-out;
 	border:1px solid transparent;
 	text-align: center;
 	white-space: pre-wrap;
+	font-size: 13px;
 
 	&:hover{
 		border-color: #ff435f;
 	}
 }
+
+/*.toaster {
+  position: relative;
+  -webkit-filter: contrast(1.5) brightness(0.9);
+          filter: contrast(1.5) brightness(0.9); }
+  
+  .toaster img {
+    width: 100%;
+    z-index: 1; }
+  
+  .toaster:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2; }
+  
+  .toaster:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 3; }
+  
+  .toaster::after {
+    background: -webkit-radial-gradient(circle, #804e0f, #3b003b);
+    background: radial-gradient(circle, #804e0f, #3b003b);
+    mix-blend-mode: screen; }*/

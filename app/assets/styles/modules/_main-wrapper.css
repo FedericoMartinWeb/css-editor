@@ -8,7 +8,6 @@
         font-weight: 400;
         font-size: 16px;
         letter-spacing: 1px;
-        overflow: auto;
         color: #fff;
 		background-color: #2C5476;
         transition: all .3s ease-out;
@@ -21,7 +20,7 @@
         &--modal{
             position: absolute;
             top: 0;
-            bottom: 0;
+            bottom: -100%;
             left: 0;
             right: 0;
             background: rgba(0, 0, 0, .35);
@@ -68,6 +67,7 @@
                 overflow: hidden;
                 position: relative;
                 width: 100%;
+                margin-bottom: 10px;
 
                  &:hover{
                     .main-wrapper__aside--item--wrapper-file--title{
@@ -80,11 +80,12 @@
                     color: #fff;
                     cursor: pointer;
                     display: inline-block;
-                    padding: 15px;
+                    padding: 8px;
                     width: 100%;
                     text-align: center;
                     transition: all .3s ease-out;
                     border: 1px solid transparent;
+                    font-size: 13px;
                 }
 
                 &--core{
@@ -181,11 +182,16 @@
                 margin-top: calc(50vh - 50px);
                 transform: translateY(-50%);
                 object-fit: cover;
-                filter: invert(0%);
+                transition: all .3s ease-out;
                 
                 @mixin atSmall{
                     margin-top: 0;
                     transform: none;
+                }
+
+                &:hover{
+                    border-radius: 0 !important;
+                    filter: none !important;
                 }
             }
         }
@@ -195,11 +201,18 @@
         display: none;
         
         @mixin atSmall{
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
+            background-color: rgba(72, 77, 77, .9);
+            height: 18px;
+            width: 34px;
             color: #fff;
             right: 5px;
-            bottom: 18px;
+            bottom: 16px;
+            font-size: 13px;
+
         }
         
         @mixin atMedium{
@@ -220,6 +233,7 @@
         margin-bottom: 0px;
         transition: all .3s ease-out;
         user-select: none;
+        font-size: 13px;
 
         &::before{
             display: none;
@@ -231,9 +245,9 @@
                 display: block;
                 position: absolute;
                 left: 7px;
-                top: 10px;
+                top: 11px;
                 border-style: solid;
-                border-width: 13px 13px 0 13px;
+                border-width: 10px 10px 0 10px;
                 border-color: #ff435f transparent transparent transparent;
                 transition: all .2s ease-out;
             }
@@ -241,7 +255,7 @@
 
         @mixin atMedium{
             &::before{
-                top: 18px;
+                top: 19px;
             }
         }
         
@@ -249,7 +263,7 @@
             &::before{
                 top: 11px;
                 left: 15px;
-                border-width: 13px 0px 13px 13px;
+                border-width: 10px 0px 10px 10px;
                 border-color: transparent transparent transparent #ff435f;
 
                 @mixin atSmall{
