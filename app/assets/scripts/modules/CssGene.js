@@ -4,6 +4,8 @@ class CssGene{
 
     constructor(){
         this.centermodal = $('.main-wrapper__center--modal');
+        this.asidemodal = $('.main-wrapper__aside--modal');
+        this.mainwrapperaside = $('.main-wrapper__aside');
         this.css = $('#cssgene');
         this.img = $('#img');
         this.events();
@@ -14,10 +16,12 @@ class CssGene{
     }
     
     showCss(){
-        this.centermodal.toggleClass('main-wrapper__center--modal--show');
+        this.centermodal.addClass('main-wrapper__center--modal--show');
+        this.asidemodal.addClass('main-wrapper__aside--modal--show');
+        this.mainwrapperaside.css('overflow-y', 'hidden');
         this.imageattr = this.img.attr('style');
         
-        if(this.imageattr !== undefined){
+        if(this.imageattr != undefined){
             this.centermodal.html("<p>" + this.imageattr + "</p>");
             this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
             this.replace = this.imageattr.replace(this.regularExpression, ';<br />');

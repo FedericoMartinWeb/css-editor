@@ -10461,6 +10461,10 @@ var _CssGene = __webpack_require__(6);
 
 var _CssGene2 = _interopRequireDefault(_CssGene);
 
+var _Reset = __webpack_require__(7);
+
+var _Reset2 = _interopRequireDefault(_Reset);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var close = new _CloseAside2.default();
@@ -10468,6 +10472,7 @@ var item = new _Items2.default();
 var image = new _UploadImage2.default();
 var main = new _Main2.default();
 var cssgene = new _CssGene2.default();
+var reset = new _Reset2.default();
 
 /***/ }),
 /* 2 */
@@ -10495,7 +10500,7 @@ var Main = function () {
         _classCallCheck(this, Main);
 
         this.img = (0, _jquery2.default)('#img');
-        this.filterinput = (0, _jquery2.default)('input[type=range].filters');
+        this.filterinput = (0, _jquery2.default)('input[type=range]');
         this.border = (0, _jquery2.default)('#border input');
         this.sepia = (0, _jquery2.default)('#sepia input');
         this.blur = (0, _jquery2.default)('#blur input');
@@ -10511,6 +10516,14 @@ var Main = function () {
             this.filterinput.on('input', this.filters.bind(this));
             //       this.blur.on('input', this.callBlur.bind(this));
         }
+
+        // Reset sliders back to their original values on press of 'reset'
+        //$('#imageEditor').on('reset', function () {
+        //	setTimeout(function() {
+        //		editImage();
+        //	},0);
+        //});
+
     }, {
         key: 'callBorder',
         value: function callBorder() {
@@ -10535,42 +10548,6 @@ var Main = function () {
 
             this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale(' + this.grayval + '%)');
         }
-
-        //   callBlur(){
-        //       this.blurval = this.blur.val();
-        //       this.blur.next().html(this.blurval);
-        //       this.img.css('filter', 'blur(' + this.blurval + 'px)');
-        //   }
-
-        //   callBright(){
-        //       this.brightval = this.bright.val();
-        //       this.bright.next().html(this.brightval);
-        //       this.img.css('filter', 'brightness(' + this.brightval + '%)');
-        //   }
-
-        // addBlur(){
-        //     this.blurval = this.blur.value;
-        //     if(this.blurval == 0) { alert('0000') } else {
-        //         this.modifi.style.filter = 'blur(' +  this.blurval  + 'px)';
-        //     }
-        // }
-
-        // callCss(){
-
-        //     this.attrstyle = this.modifi.getAttribute('style');
-
-        //     if(this.attrstyle !== null){
-        //         this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
-        //         this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
-        //         this.replace = this.attrstyle.replace(this.regularExpression, ';<br />');
-        //         if(this.regularExpression.test(this.attrstyle) === true){
-        //             this.props.innerHTML = this.replace;
-        //         }
-        //     }else{
-        //         this.props.innerHTML = 'nothing to show here mate';
-        //     }
-        // }
-
     }]);
 
     return Main;
@@ -10814,6 +10791,8 @@ var CssGene = function () {
         _classCallCheck(this, CssGene);
 
         this.centermodal = (0, _jquery2.default)('.main-wrapper__center--modal');
+        this.asidemodal = (0, _jquery2.default)('.main-wrapper__aside--modal');
+        this.mainwrapperaside = (0, _jquery2.default)('.main-wrapper__aside');
         this.css = (0, _jquery2.default)('#cssgene');
         this.img = (0, _jquery2.default)('#img');
         this.events();
@@ -10827,10 +10806,12 @@ var CssGene = function () {
     }, {
         key: 'showCss',
         value: function showCss() {
-            this.centermodal.toggleClass('main-wrapper__center--modal--show');
+            this.centermodal.addClass('main-wrapper__center--modal--show');
+            this.asidemodal.addClass('main-wrapper__aside--modal--show');
+            this.mainwrapperaside.css('overflow-y', 'hidden');
             this.imageattr = this.img.attr('style');
 
-            if (this.imageattr !== undefined) {
+            if (this.imageattr != undefined) {
                 this.centermodal.html("<p>" + this.imageattr + "</p>");
                 this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
                 this.replace = this.imageattr.replace(this.regularExpression, ';<br />');
@@ -10863,6 +10844,59 @@ var CssGene = function () {
 //    }
 
 exports.default = CssGene;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Reset = function () {
+    function Reset() {
+        _classCallCheck(this, Reset);
+
+        this.reset = (0, _jquery2.default)('#reset');
+        this.filters = (0, _jquery2.default)('input[type=range]');
+        this.events();
+    }
+
+    _createClass(Reset, [{
+        key: 'events',
+        value: function events() {
+            this.reset.on('click', this.CallReset.bind(this));
+        }
+    }, {
+        key: 'CallReset',
+        value: function CallReset() {
+            this.filtersval = this.filters.each(function () {
+                this.filteroriginalval = (0, _jquery2.default)(this).attr('value');
+
+                (0, _jquery2.default)(this).next().html(this.filteroriginalval);
+                (0, _jquery2.default)(this).val(this.filteroriginalval);
+                (0, _jquery2.default)('#img').removeAttr('style');
+            });
+        }
+    }]);
+
+    return Reset;
+}();
+
+exports.default = Reset;
 
 /***/ })
 /******/ ]);

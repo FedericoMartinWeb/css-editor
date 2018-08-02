@@ -36,6 +36,7 @@
 
     <main class="main-wrapper">
         <aside class="main-wrapper__aside">
+            <div class="main-wrapper__aside--modal"></div>
             <div class="main-wrapper__aside--item">
                 <div class="main-wrapper__aside--item--wrapper-file">
                     <span class="main-wrapper__aside--item--wrapper-file--title">Upload your image!</span>
@@ -47,12 +48,12 @@
             </div>
             <div class="main-wrapper__aside--item" id="border">
                 <div class="main-wrapper__title">Border-radius</div>
-                <input type="range" class="slider" value="0" max="100">
+                <input type="range" class="slider aaa" value="0" max="100">
                 <div class="main-wrapper__number">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="sepia">
                 <div class="main-wrapper__title">Sepia</div>
-                <input type="range" class="slider filters" value="0" max="100">
+                <input type="range" class="slider filters aaa" value="0" max="100">
                 <!-- step="0.01" -->
                 <div class="main-wrapper__number">0</div>
             </div>
@@ -71,10 +72,13 @@
                 <input type="range" class="slider filters" value="0" max="100">
                 <div class="main-wrapper__number">0</div>
             </div>
+            <div class="main-wrapper__aside--item">
+                <input type="button" id="reset" class="button" value="Reset!">
+            </div>
         </aside>
 
         <article class="main-wrapper__center">
-            <div class="main-wrapper__center--modal">sdfsdfsd</div>
+            <div class="main-wrapper__center--modal"></div>
             <div class="main-wrapper__center__img">
                 <img src="assets/images/preview_img.jpg" alt="userImg" class="main-wrapper__center__img--core" id="img">
             </div>

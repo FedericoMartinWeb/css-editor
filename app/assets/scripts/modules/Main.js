@@ -4,7 +4,7 @@ class Main{
 
    constructor(){
        this.img = $('#img');
-       this.filterinput = $('input[type=range].filters');
+       this.filterinput = $('input[type=range]');
        this.border = $('#border input');
        this.sepia = $('#sepia input');
        this.blur = $('#blur input');
@@ -18,6 +18,13 @@ class Main{
        this.filterinput.on('input', this.filters.bind(this));
 //       this.blur.on('input', this.callBlur.bind(this));
    }
+    
+    // Reset sliders back to their original values on press of 'reset'
+//$('#imageEditor').on('reset', function () {
+//	setTimeout(function() {
+//		editImage();
+//	},0);
+//});
    
    callBorder(){
        this.borderval = this.border.val();
@@ -40,42 +47,6 @@ class Main{
 
        this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale('+ this.grayval +'%)');
    }
-
-//   callBlur(){
-//       this.blurval = this.blur.val();
-//       this.blur.next().html(this.blurval);
-//       this.img.css('filter', 'blur(' + this.blurval + 'px)');
-//   }
-
-//   callBright(){
-//       this.brightval = this.bright.val();
-//       this.bright.next().html(this.brightval);
-//       this.img.css('filter', 'brightness(' + this.brightval + '%)');
-//   }
-
-   // addBlur(){
-   //     this.blurval = this.blur.value;
-   //     if(this.blurval == 0) { alert('0000') } else {
-   //         this.modifi.style.filter = 'blur(' +  this.blurval  + 'px)';
-   //     }
-   // }
-
-   // callCss(){
-       
-   //     this.attrstyle = this.modifi.getAttribute('style');
-       
-   //     if(this.attrstyle !== null){
-   //         this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
-   //         this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
-   //         this.replace = this.attrstyle.replace(this.regularExpression, ';<br />');
-   //         if(this.regularExpression.test(this.attrstyle) === true){
-   //             this.props.innerHTML = this.replace;
-   //         }
-   //     }else{
-   //         this.props.innerHTML = 'nothing to show here mate';
-   //     }
-   // }
-
 }
 
 export default Main;
