@@ -84,6 +84,9 @@
                 <input type="range" class="slider filters" value="0" min="0" max="360">
                 <div class="main-wrapper__number">0</div>
             </div>
+            <div class="main-wrapper__aside--item" id="hue">
+                <div id="dale"></div>
+            </div>
             <div class="main-wrapper__aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">
             </div>
