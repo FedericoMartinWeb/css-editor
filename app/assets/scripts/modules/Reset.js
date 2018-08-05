@@ -1,10 +1,11 @@
 import $ from 'jquery';
+import "jquery-ui-slider/jquery-ui.min";
 
 class Reset{
 
     constructor(){
         this.reset = $('#reset');
-        this.filters = $('input[type=range]');
+        this.filters = $('.slider');
         this.events();
     }
     
@@ -13,13 +14,18 @@ class Reset{
     }
     
     CallReset(){
-        this.filtersval = this.filters.each(function(){
-            this.filteroriginalval = $(this).attr('value');
-            
-            $(this).next().html(this.filteroriginalval);
-            $(this).val(this.filteroriginalval);
-            $('#img').removeAttr('style');
-        });
+        $('.slider').slider('value', 0);
+            $('style').remove();
+        
+//        this.filtersval = this.filters.each(function(){
+//            
+//////            
+//////            $(this).next().html(this.filteroriginalval);
+//////            $(this).val(this.filteroriginalval);
+//////            $('#img').removeAttr('style');
+//        });
+        
+        
     }
 
 }

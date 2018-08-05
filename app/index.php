@@ -50,51 +50,55 @@
             </div> -->
             <div class="main-wrapper__aside--item" id="border">
                 <div class="main-wrapper__title">Border-radius</div>
-                <input type="range" class="slider" value="0" max="100">
+<!--                <input type="range" class="slider" value="0" max="100">-->
+                <div class="slider"></div>
                 <div class="main-wrapper__number">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="sepia">
                 <div class="main-wrapper__title">Sepia</div>
-                <input type="range" class="slider filters" value="0" max="100">
+<!--                <input type="range" class="slider filters" value="0" max="100">-->
+                <div class="slider" id="sepia-value-out"></div>
                 <!-- step="0.01" -->
-                <div class="main-wrapper__number">0</div>
+                <div class="main-wrapper__number" id="sepia-value">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="blur">
                 <div class="main-wrapper__title">Blur</div>
-                <input type="range" class="slider filters" value="0" max="10" step="0.01">
-                <div class="main-wrapper__number">0</div>
+<!--                <input type="range" class="slider filters" value="0" max="10" step="0.01">-->
+                <div class="slider" id="blur-value-out"></div>
+                <div class="main-wrapper__number" id="blur-value">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="bright">
                 <div class="main-wrapper__title">Brightness</div>
-                <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">
+<!--                <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">-->
+                <div class="slider"></div>
                 <div class="main-wrapper__number">1</div>
             </div>
             <div class="main-wrapper__aside--item" id="gray">
                 <div class="main-wrapper__title">Grayscale</div>
-                <input type="range" class="slider filters" value="0" max="100">
+<!--                <input type="range" class="slider filters" value="0" max="100">-->
+                <div class="slider"></div>
                 <div class="main-wrapper__number">0</div>
             </div>
             <div class="main-wrapper__aside--item" id="contrast">
                 <div class="main-wrapper__title">Contrast</div>
-                <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">
+<!--                <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">-->
+                <div class="slider"></div>
                 <div class="main-wrapper__number">1</div>
             </div>
             <div class="main-wrapper__aside--item" id="hue">
                 <div class="main-wrapper__title">Hue-rotate</div>
-                <input type="range" class="slider filters" value="0" min="0" max="360">
+<!--                <input type="range" class="slider filters" value="0" min="0" max="360">-->
+                <div class="slider"></div>
                 <div class="main-wrapper__number">0</div>
-            </div>
-            <div class="main-wrapper__aside--item" id="hue">
-                <div id="dale"></div>
             </div>
             <div class="main-wrapper__aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">
             </div>
         </aside>
         <article class="main-wrapper__center">
-            <div class="main-wrapper__center--modal"></div>
+            <div class="main-wrapper__center--modal" id="code"></div>
             <div class="main-wrapper__center__img">
-                <img src="assets/images/preview_img.jpg" alt="userImg" class="main-wrapper__center__img--core" id="img">
+                <img src="assets/images/preview_img.jpg" alt="userImg" class="main-wrapper__center__img--core filter" id="img">
             </div>
         </article>
     </main>
