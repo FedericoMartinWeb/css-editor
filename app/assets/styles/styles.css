@@ -4,5 +4,7 @@
 @import 'base/_global.css';
 @import 'modules/_site-header.css';
 @import 'modules/_main-wrapper.css';
+@import 'modules/_aside.css';
+@import 'modules/_center.css';
 @import 'modules/_slider.css';
 @import 'modules/_button.css';

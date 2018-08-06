@@ -12,7 +12,7 @@ class UploadImage{
                 var reader = new FileReader();
                 
                 reader.onload = function (e) {
-                    $('.main-wrapper__center__img--core').attr('src', e.target.result);
+                    $('.center__img--core').attr('src', e.target.result);
                 }
                 
                 reader.readAsDataURL(input.files[0]);

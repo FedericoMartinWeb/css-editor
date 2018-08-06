@@ -10480,26 +10480,62 @@ var Switch = function () {
         key: 'switch',
         value: function _switch() {
             var sepia = (0, _jquery2.default)('#sepia-value').html();
+            var blur = (0, _jquery2.default)('#blur-value').html();
+            var bright = (0, _jquery2.default)('#bright-value').html();
+            var gray = (0, _jquery2.default)('#gray-value').html();
+            var contrast = (0, _jquery2.default)('#contrast-value').html();
+            var hue = (0, _jquery2.default)('#hue-value').html();
 
             var css = '.filter {\n';
             css += '  -webkit-filter:';
-            if (sepia != "0%") {
-                css += ' sepia(' + sepia + ')';
+            if (sepia != "0") {
+                css += ' sepia(' + sepia + '%)';
+            }
+            if (blur != "0") {
+                css += ' blur(' + blur + 'px)';
+            }
+            if (bright != "1") {
+                css += ' brightness(' + bright + ')';
+            }
+            if (gray != "0") {
+                css += ' grayscale(' + gray + '%)';
+            }
+            if (contrast != "1") {
+                css += ' contrast(' + contrast + ')';
+            }
+            if (hue != "0") {
+                css += ' hue-rotate(' + hue + 'deg)';
             }
             css += ';\n';
             css += '  filter:';
-            if (sepia != "0%") {
-                css += ' sepia(' + sepia + ')';
+            if (sepia != "0") {
+                css += ' sepia(' + sepia + '%)';
             }
+            if (blur != "0") {
+                css += ' blur(' + blur + 'px)';
+            }
+            if (bright != "1") {
+                css += ' brightness(' + bright + ')';
+            }
+            if (gray != "0") {
+                css += ' grayscale(' + gray + '%)';
+            }
+            if (contrast != "1") {
+                css += ' contrast(' + contrast + ')';
+            }
+            if (hue != "0") {
+                css += ' hue-rotate(' + hue + 'deg)';
+            }
+
             css += ';\n}\n';
 
-            var codeDiv = (0, _jquery2.default)("code");
+            // var codeDiv = document.getElementById('code');
 
-            if (codeDiv.innerText) {
-                codeDiv.innerText = css;
-            } else {
-                codeDiv.textContent = css;
-            }
+            // if(codeDiv.innerText){
+            //     codeDiv.innerText = css
+            // }else{
+            //     codeDiv.textContent = css
+            // }
 
             (0, _jquery2.default)('style').remove();
             (0, _jquery2.default)('head').append('<style type="text/css">' + css + '</style>');
@@ -10607,14 +10643,6 @@ var Main = function () {
             this.filterinput.on('input', this.filters.bind(this));
             //       this.blur.on('input', this.callBlur.bind(this));
         }
-
-        // Reset sliders back to their original values on press of 'reset'
-        //$('#imageEditor').on('reset', function () {
-        //	setTimeout(function() {
-        //		editImage();
-        //	},0);
-        //});
-
     }, {
         key: 'callBorder',
         value: function callBorder() {
@@ -10736,8 +10764,8 @@ var CloseAside = function () {
         _classCallCheck(this, CloseAside);
 
         this.icon = (0, _jquery2.default)('.site-header__menu-icon');
-        this.aside = (0, _jquery2.default)('.main-wrapper__aside');
-        this.center = (0, _jquery2.default)('.main-wrapper__center');
+        this.aside = (0, _jquery2.default)('.aside');
+        this.center = (0, _jquery2.default)('.center');
         this.events();
     }
 
@@ -10750,8 +10778,8 @@ var CloseAside = function () {
         key: 'closeX',
         value: function closeX() {
             this.icon.toggleClass('site-header__menu-icon--close-x');
-            this.aside.toggleClass('main-wrapper__aside--hide');
-            this.center.toggleClass('main-wrapper__center--expand');
+            this.aside.toggleClass('aside--hide');
+            this.center.toggleClass('center--expand');
         }
     }]);
 
@@ -10785,7 +10813,7 @@ var Items = function () {
     function Items() {
         _classCallCheck(this, Items);
 
-        this.title = (0, _jquery2.default)('.main-wrapper__title');
+        this.title = (0, _jquery2.default)('.aside__title');
         this.events();
     }
 
@@ -10797,9 +10825,9 @@ var Items = function () {
     }, {
         key: 'triangleAnimation',
         value: function triangleAnimation() {
-            (0, _jquery2.default)(this).toggleClass('main-wrapper__title--animation');
+            (0, _jquery2.default)(this).toggleClass('aside__title--animation');
             (0, _jquery2.default)(this).next().toggleClass('slider--hide');
-            (0, _jquery2.default)(this).nextAll().eq(1).toggleClass('main-wrapper__number--hide');
+            (0, _jquery2.default)(this).nextAll().eq(1).toggleClass('aside__number--hide');
         }
     }]);
 
@@ -10844,7 +10872,7 @@ var UploadImage = function () {
                     var reader = new FileReader();
 
                     reader.onload = function (e) {
-                        (0, _jquery2.default)('.main-wrapper__center__img--core').attr('src', e.target.result);
+                        (0, _jquery2.default)('.center__img--core').attr('src', e.target.result);
                     };
 
                     reader.readAsDataURL(input.files[0]);
@@ -10887,9 +10915,9 @@ var CssGene = function () {
     function CssGene() {
         _classCallCheck(this, CssGene);
 
-        this.centermodal = (0, _jquery2.default)('.main-wrapper__center--modal');
-        this.asidemodal = (0, _jquery2.default)('.main-wrapper__aside--modal');
-        this.mainwrapperaside = (0, _jquery2.default)('.main-wrapper__aside');
+        this.centermodal = (0, _jquery2.default)('.center--modal');
+        this.asidemodal = (0, _jquery2.default)('.aside--modal');
+        this.mainwrapperaside = (0, _jquery2.default)('.aside');
         this.css = (0, _jquery2.default)('#cssgene');
         this.img = (0, _jquery2.default)('#img');
         this.events();
@@ -10903,42 +10931,14 @@ var CssGene = function () {
     }, {
         key: 'showCss',
         value: function showCss() {
-            this.centermodal.addClass('main-wrapper__center--modal--show');
-            this.asidemodal.addClass('main-wrapper__aside--modal--show');
+            this.centermodal.addClass('center--modal--show');
+            this.asidemodal.addClass('aside--modal--show');
             this.mainwrapperaside.css('overflow-y', 'hidden');
-            this.imageattr = this.img.attr('style');
-
-            if (this.imageattr != undefined) {
-                this.centermodal.html("<p>" + this.imageattr + "</p>");
-                this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
-                this.replace = this.imageattr.replace(this.regularExpression, ';<br />');
-                if (this.regularExpression.test(this.imageattr)) {
-                    this.centermodal.html(this.replace);
-                }
-            } else {
-                this.centermodal.html("Nothing to show yet!");
-            }
         }
     }]);
 
     return CssGene;
 }();
-
-//    callCss(){
-//        
-//        this.attrstyle = this.modifi.getAttribute('style');
-//        
-//        if(this.attrstyle !== null){
-//            this.props.innerHTML = "<p class='attr'>" + this.attrstyle + "</p>";
-//            this.regularExpression = /;(?=(((?!\]).)*\[)|[^\[\]]*$)/g;
-//            this.replace = this.attrstyle.replace(this.regularExpression, ';<br />');
-//            if(this.regularExpression.test(this.attrstyle) === true){
-//                this.props.innerHTML = this.replace;
-//            }
-//        }else{
-//            this.props.innerHTML = 'nothing to show here mate';
-//        }
-//    }
 
 exports.default = CssGene;
 
@@ -10982,17 +10982,12 @@ var Reset = function () {
     }, {
         key: 'CallReset',
         value: function CallReset() {
-            (0, _jquery2.default)('.slider').slider('value', 0);
-            (0, _jquery2.default)('style').remove();
-
-            //        this.filtersval = this.filters.each(function(){
-            //            
-            //////            
-            //////            $(this).next().html(this.filteroriginalval);
-            //////            $(this).val(this.filteroriginalval);
-            //////            $('#img').removeAttr('style');
-            //        });
-
+            this.filtersval = this.filters.each(function () {
+                this.val = (0, _jquery2.default)(this).attr('data-value');
+                (0, _jquery2.default)(this).slider('value', this.val);
+                (0, _jquery2.default)(this).next().html(this.val);
+                (0, _jquery2.default)('style').remove();
+            });
         }
     }]);
 
@@ -11009,7 +11004,7 @@ exports.default = Reset;
 
 
 Object.defineProperty(exports, "__esModule", {
-				value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11031,31 +11026,100 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var switchit = new _Switch2.default();
 
 var Sliderui = function () {
-				function Sliderui() {
-								_classCallCheck(this, Sliderui);
+	function Sliderui() {
+		_classCallCheck(this, Sliderui);
 
-								this.Sliders();
+		this.Sliders();
+	}
+
+	_createClass(Sliderui, [{
+		key: 'Sliders',
+		value: function Sliders() {
+
+			(0, _jquery2.default)("#sepia-value-out").slider({
+				orientation: "horizontal",
+				range: "min",
+				min: 0,
+				max: 100,
+				value: 0,
+				slide: function slide(event, ui) {
+					(0, _jquery2.default)("#sepia-value").text(ui.value);
+					switchit.switch();
 				}
+			});
+			(0, _jquery2.default)("#sepia-value").text((0, _jquery2.default)("#sepia-value-out").slider("value"));
 
-				_createClass(Sliderui, [{
-								key: 'Sliders',
-								value: function Sliders() {
-												(0, _jquery2.default)("#sepia-value-out").slider({
-																orientation: "horizontal",
-																range: "min",
-																min: 0,
-																max: 100,
-																value: 0,
-																slide: function slide(event, ui) {
-																				(0, _jquery2.default)("#sepia-value").text(ui.value + "%");
-																				console.log(switchit.switch());
-																}
-												});
-												(0, _jquery2.default)("#sepia-value").text((0, _jquery2.default)("#sepia-value-out").slider("value") + "%");
-								}
-				}]);
+			(0, _jquery2.default)("#blur-value-out").slider({
+				orientation: "horizontal",
+				range: "min",
+				min: 0,
+				max: 10,
+				step: 0.01,
+				value: 0,
+				slide: function slide(event, ui) {
+					(0, _jquery2.default)("#blur-value").text(ui.value);
+					switchit.switch();
+				}
+			});
+			(0, _jquery2.default)("#blur-value").text((0, _jquery2.default)("#blur-value-out").slider("value"));
 
-				return Sliderui;
+			(0, _jquery2.default)("#bright-value-out").slider({
+				orientation: "horizontal",
+				range: "min",
+				min: 0,
+				max: 3,
+				step: 0.01,
+				value: 1,
+				slide: function slide(event, ui) {
+					(0, _jquery2.default)("#bright-value").text(ui.value);
+					switchit.switch();
+				}
+			});
+			(0, _jquery2.default)("#bright-value").text((0, _jquery2.default)("#bright-value-out").slider("value"));
+
+			(0, _jquery2.default)("#gray-value-out").slider({
+				orientation: "horizontal",
+				range: "min",
+				min: 0,
+				max: 100,
+				value: 0,
+				slide: function slide(event, ui) {
+					(0, _jquery2.default)("#gray-value").text(ui.value);
+					switchit.switch();
+				}
+			});
+			(0, _jquery2.default)("#gray-value").text((0, _jquery2.default)("#gray-value-out").slider("value"));
+
+			(0, _jquery2.default)("#contrast-value-out").slider({
+				orientation: "horizontal",
+				range: "min",
+				min: 0,
+				max: 3,
+				step: 0.01,
+				value: 1,
+				slide: function slide(event, ui) {
+					(0, _jquery2.default)("#contrast-value").text(ui.value);
+					switchit.switch();
+				}
+			});
+			(0, _jquery2.default)("#contrast-value").text((0, _jquery2.default)("#contrast-value-out").slider("value"));
+
+			(0, _jquery2.default)("#hue-value-out").slider({
+				orientation: "horizontal",
+				range: "min",
+				min: 0,
+				max: 360,
+				value: 0,
+				slide: function slide(event, ui) {
+					(0, _jquery2.default)("#hue-value").text(ui.value);
+					switchit.switch();
+				}
+			});
+			(0, _jquery2.default)("#hue-value").text((0, _jquery2.default)("#hue-value-out").slider("value"));
+		}
+	}]);
+
+	return Sliderui;
 }();
 
 exports.default = Sliderui;

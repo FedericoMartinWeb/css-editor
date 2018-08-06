@@ -14,20 +14,13 @@ class Reset{
     }
     
     CallReset(){
-        $('.slider').slider('value', 0);
+        this.filtersval = this.filters.each(function(){
+            this.val = $(this).attr('data-value');
+            $(this).slider('value', this.val);
+            $(this).next().html(this.val);
             $('style').remove();
-        
-//        this.filtersval = this.filters.each(function(){
-//            
-//////            
-//////            $(this).next().html(this.filteroriginalval);
-//////            $(this).val(this.filteroriginalval);
-//////            $('#img').removeAttr('style');
-//        });
-        
-        
+        });
     }
-
 }
 
 export default Reset;

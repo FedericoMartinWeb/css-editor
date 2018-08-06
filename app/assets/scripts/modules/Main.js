@@ -20,13 +20,6 @@ class Main{
        this.filterinput.on('input', this.filters.bind(this));
 //       this.blur.on('input', this.callBlur.bind(this));
    }
-    
-    // Reset sliders back to their original values on press of 'reset'
-//$('#imageEditor').on('reset', function () {
-//	setTimeout(function() {
-//		editImage();
-//	},0);
-//});
    
    callBorder(){
        this.borderval = this.border.val();

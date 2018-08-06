@@ -35,91 +35,67 @@
     <!-- Header End -->
 
     <main class="main-wrapper">
-        <aside class="main-wrapper__aside">
-            <div class="main-wrapper__aside--modal"></div>
-            <div class="main-wrapper__aside--item">
-                <div class="main-wrapper__aside--item--wrapper-file">
-                    <span class="main-wrapper__aside--item--wrapper-file--title">Upload your image!</span>
-                    <input type="file" class="main-wrapper__aside--item--wrapper-file--core" id="uFile">
+        <aside class="aside">
+            <div class="aside--modal"></div>
+            <div class="aside--item">
+                <div class="aside--item--wrapper-file">
+                    <span class="aside--item--wrapper-file--title">Upload your image!</span>
+                    <input type="file" class="aside--item--wrapper-file--core" id="uFile">
                 </div>
-
                 <input type="button" id="cssgene" class="button" value="Generate Css!">
-            </div>
-            <!-- <div class="main-wrapper__aside--item">
-                <input type="button" id="cssgene" class="button" value="Generate Css!">
+            </div><!-- 
+            <div class="aside--item" id="border">
+                <div class="aside__title">Border-radius</div>
+                <input type="range" class="slider" value="0" max="100">
+                <div class="slider"></div>
+                <div class="aside__number">0</div>
             </div> -->
-            <div class="main-wrapper__aside--item" id="border">
-                <div class="main-wrapper__title">Border-radius</div>
-<!--                <input type="range" class="slider" value="0" max="100">-->
-                <div class="slider"></div>
-                <div class="main-wrapper__number">0</div>
+            <div class="aside--item">
+                <div class="aside__title">Sepia</div>
+                <div class="slider" id="sepia-value-out" data-value='0'></div>
+                <div class="aside__number" id="sepia-value">0</div>
             </div>
-            <div class="main-wrapper__aside--item" id="sepia">
-                <div class="main-wrapper__title">Sepia</div>
-<!--                <input type="range" class="slider filters" value="0" max="100">-->
-                <div class="slider" id="sepia-value-out"></div>
-                <!-- step="0.01" -->
-                <div class="main-wrapper__number" id="sepia-value">0</div>
+            <div class="aside--item">
+                <div class="aside__title">Blur</div>
+                <div class="slider" id="blur-value-out" data-value='0'></div>
+                <div class="aside__number" id="blur-value">0</div>
             </div>
-            <div class="main-wrapper__aside--item" id="blur">
-                <div class="main-wrapper__title">Blur</div>
-<!--                <input type="range" class="slider filters" value="0" max="10" step="0.01">-->
-                <div class="slider" id="blur-value-out"></div>
-                <div class="main-wrapper__number" id="blur-value">0</div>
+            <div class="aside--item">
+                <div class="aside__title">Brightness</div>
+                <div class="slider" id="bright-value-out" data-value='1'></div>
+                <div class="aside__number" id="bright-value">1</div>
             </div>
-            <div class="main-wrapper__aside--item" id="bright">
-                <div class="main-wrapper__title">Brightness</div>
-<!--                <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">-->
-                <div class="slider"></div>
-                <div class="main-wrapper__number">1</div>
+            <div class="aside--item">
+                <div class="aside__title">Grayscale</div>
+                <div class="slider" id="gray-value-out" data-value='0'></div>
+                <div class="aside__number" id="gray-value">0</div>
             </div>
-            <div class="main-wrapper__aside--item" id="gray">
-                <div class="main-wrapper__title">Grayscale</div>
-<!--                <input type="range" class="slider filters" value="0" max="100">-->
-                <div class="slider"></div>
-                <div class="main-wrapper__number">0</div>
+            <div class="aside--item">
+                <div class="aside__title">Contrast</div>
+                <div class="slider" id="contrast-value-out" data-value='1'></div>
+                <div class="aside__number" id="contrast-value">1</div>
             </div>
-            <div class="main-wrapper__aside--item" id="contrast">
-                <div class="main-wrapper__title">Contrast</div>
-<!--                <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">-->
-                <div class="slider"></div>
-                <div class="main-wrapper__number">1</div>
+            <div class="aside--item">
+                <div class="aside__title">Hue-rotate</div>
+                <div class="slider" id="hue-value-out" data-value='0'></div>
+                <div class="aside__number" id="hue-value">0</div>
             </div>
-            <div class="main-wrapper__aside--item" id="hue">
-                <div class="main-wrapper__title">Hue-rotate</div>
-<!--                <input type="range" class="slider filters" value="0" min="0" max="360">-->
-                <div class="slider"></div>
-                <div class="main-wrapper__number">0</div>
-            </div>
-            <div class="main-wrapper__aside--item">
+            <div class="aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">
             </div>
         </aside>
-        <article class="main-wrapper__center">
-            <div class="main-wrapper__center--modal" id="code"></div>
-            <div class="main-wrapper__center__img">
-                <img src="assets/images/preview_img.jpg" alt="userImg" class="main-wrapper__center__img--core filter" id="img">
+        <article class="center">
+            <div class="center--modal">
+                <input type="button" value="Close" class="center--modal__close button">
+                <input type="button" value="Copy" class="center--modal__copy button">
+                <div id="code"></div>
+            </div>
+            <div class="center__img">
+                <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core filter" id="img">
             </div>
         </article>
     </main>
 
-    <!-- <div class="box-wrapper">
-        <div class="box"><p class="parrafo"></p></div>
-    </div>
-
-    <input type="text" class="texto">
-    <input type="submit" class="button" value="enviar">
-
-    <div class="contador">0</div>
-    <div class="modifi"></div>
-    <img src="assets/images/dog.jpg" class="modifi" alt="">
-    <input type="range" min="-100" max="100" value="0" class="slider" id="myRange">
-    <input type="color" value="#ff0000" class="color">
-    <input type="range" value="0" max="50" class="blur">
-
-    <div class="props"></div>
-    <input type="submit" class="propbutton" value="mostrar css">
-     -->
     <!-- End Footer -->
     <script src="temp/scripts/App.js"></script>
    

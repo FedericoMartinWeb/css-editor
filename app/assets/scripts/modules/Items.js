@@ -3,7 +3,7 @@ import $ from 'jquery';
 class Items{
 
     constructor(){
-        this.title = $('.main-wrapper__title');
+        this.title = $('.aside__title');
         this.events();
     }
     
@@ -12,9 +12,9 @@ class Items{
     }
     
     triangleAnimation(){
-        $(this).toggleClass('main-wrapper__title--animation');
+        $(this).toggleClass('aside__title--animation');
         $(this).next().toggleClass('slider--hide');
-        $(this).nextAll().eq(1).toggleClass('main-wrapper__number--hide');
+        $(this).nextAll().eq(1).toggleClass('aside__number--hide');
     }
 }
 
