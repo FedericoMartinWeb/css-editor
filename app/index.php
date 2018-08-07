@@ -43,13 +43,7 @@
                     <input type="file" class="aside--item--wrapper-file--core" id="uFile">
                 </div>
                 <input type="button" id="cssgene" class="button" value="Generate Css!">
-            </div><!-- 
-            <div class="aside--item" id="border">
-                <div class="aside__title">Border-radius</div>
-                <input type="range" class="slider" value="0" max="100">
-                <div class="slider"></div>
-                <div class="aside__number">0</div>
-            </div> -->
+            </div>
             <div class="aside--item">
                 <div class="aside__title">Sepia</div>
                 <div class="slider" id="sepia-value-out" data-value='0'></div>
@@ -86,9 +80,12 @@
         </aside>
         <article class="center">
             <div class="center--modal">
-                <input type="button" value="Close" class="center--modal__close button">
-                <input type="button" value="Copy" class="center--modal__copy button">
-                <div id="code"></div>
+                <div class="center--modal__wrapper-btn">
+                    <input type="button" value="Copy" class="center--modal__copy button button--wa">
+                    <input type="button" value="Close" class="center--modal__close button button--wa">
+                </div>
+                <div class="center--modal__init-code">&lt;!-- Add this class to your image! --&gt;</div>
+                <div class="center--modal__code"></div>
             </div>
             <div class="center__img">
                 <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core filter" id="img">
@@ -96,7 +93,7 @@
         </article>
     </main>
 
-    <!-- End Footer -->
+    <!-- Scripts -->
     <script src="temp/scripts/App.js"></script>
    
 </body>

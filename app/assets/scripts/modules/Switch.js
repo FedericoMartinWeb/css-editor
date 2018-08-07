@@ -15,7 +15,7 @@ class Switch{
         var hue = $('#hue-value').html();
         
         var css = '.filter {\n';
-        css += '  -webkit-filter:';
+        css += '-webkit-filter:';
         if (sepia!="0"){
             css += ' sepia('+sepia+'%)';
         }
@@ -35,7 +35,7 @@ class Switch{
             css += ' hue-rotate('+hue+'deg)';
         }
         css += ';\n';
-        css += '  filter:';
+        css += 'filter:';
         if (sepia!="0"){
             css += ' sepia('+sepia+'%)';
         }
@@ -55,15 +55,10 @@ class Switch{
             css += ' hue-rotate('+hue+'deg)';
         }
 
-        css += ';\n}\n';
+        css += ';\n}';
         
-        // var codeDiv = document.getElementById('code');
-			
-        // if(codeDiv.innerText){
-        //     codeDiv.innerText = css
-        // }else{
-        //     codeDiv.textContent = css
-        // }
+        var codeDiv = $('.center--modal__code');
+        codeDiv.html(css);
         
         $('style').remove();
         $('head').append('<style type="text/css">' + css + '</style>');

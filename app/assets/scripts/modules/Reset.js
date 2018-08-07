@@ -6,6 +6,7 @@ class Reset{
     constructor(){
         this.reset = $('#reset');
         this.filters = $('.slider');
+        this.divCode = $('.center--modal__code');
         this.events();
     }
     
@@ -20,6 +21,7 @@ class Reset{
             $(this).next().html(this.val);
             $('style').remove();
         });
+        this.divCode.html('.filter { <br /> -webkit-filter:;<br /> filter:; <br />}');
     }
 }
 

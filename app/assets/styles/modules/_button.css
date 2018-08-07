@@ -12,6 +12,11 @@
 	white-space: pre-wrap;
 	font-size: 13px;
 
+  &--wa{
+    width: auto;
+    padding: .5rem .8rem;
+  }
+
 	&:hover{
 		border-color: #ff435f;
 	}

@@ -108,14 +108,14 @@
             height: 18px;
             width: 34px;
             color: #fff;
-            right: 5px;
+            right: 3px;
             bottom: 16px;
             font-size: 13px;
 
         }
         
         @mixin atMedium{
-            right: 15px;
+            right: 7px;
         }
         
         @mixin atLarge{

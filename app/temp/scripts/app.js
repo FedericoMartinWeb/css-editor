@@ -10487,7 +10487,7 @@ var Switch = function () {
             var hue = (0, _jquery2.default)('#hue-value').html();
 
             var css = '.filter {\n';
-            css += '  -webkit-filter:';
+            css += '-webkit-filter:';
             if (sepia != "0") {
                 css += ' sepia(' + sepia + '%)';
             }
@@ -10507,7 +10507,7 @@ var Switch = function () {
                 css += ' hue-rotate(' + hue + 'deg)';
             }
             css += ';\n';
-            css += '  filter:';
+            css += 'filter:';
             if (sepia != "0") {
                 css += ' sepia(' + sepia + '%)';
             }
@@ -10527,15 +10527,10 @@ var Switch = function () {
                 css += ' hue-rotate(' + hue + 'deg)';
             }
 
-            css += ';\n}\n';
+            css += ';\n}';
 
-            // var codeDiv = document.getElementById('code');
-
-            // if(codeDiv.innerText){
-            //     codeDiv.innerText = css
-            // }else{
-            //     codeDiv.textContent = css
-            // }
+            var codeDiv = (0, _jquery2.default)('.center--modal__code');
+            codeDiv.html(css);
 
             (0, _jquery2.default)('style').remove();
             (0, _jquery2.default)('head').append('<style type="text/css">' + css + '</style>');
@@ -10919,6 +10914,7 @@ var CssGene = function () {
         this.asidemodal = (0, _jquery2.default)('.aside--modal');
         this.mainwrapperaside = (0, _jquery2.default)('.aside');
         this.css = (0, _jquery2.default)('#cssgene');
+        this.close = (0, _jquery2.default)('.center--modal__close');
         this.img = (0, _jquery2.default)('#img');
         this.events();
     }
@@ -10927,6 +10923,7 @@ var CssGene = function () {
         key: 'events',
         value: function events() {
             this.css.on('click', this.showCss.bind(this));
+            this.close.on('click', this.closeCss.bind(this));
         }
     }, {
         key: 'showCss',
@@ -10934,6 +10931,13 @@ var CssGene = function () {
             this.centermodal.addClass('center--modal--show');
             this.asidemodal.addClass('aside--modal--show');
             this.mainwrapperaside.css('overflow-y', 'hidden');
+        }
+    }, {
+        key: 'closeCss',
+        value: function closeCss() {
+            this.centermodal.removeClass('center--modal--show');
+            this.asidemodal.removeClass('aside--modal--show');
+            this.mainwrapperaside.css('overflow-y', 'scroll');
         }
     }]);
 
@@ -10971,6 +10975,7 @@ var Reset = function () {
 
         this.reset = (0, _jquery2.default)('#reset');
         this.filters = (0, _jquery2.default)('.slider');
+        this.divCode = (0, _jquery2.default)('.center--modal__code');
         this.events();
     }
 
@@ -10988,6 +10993,7 @@ var Reset = function () {
                 (0, _jquery2.default)(this).next().html(this.val);
                 (0, _jquery2.default)('style').remove();
             });
+            this.divCode.html('.filter { <br /> -webkit-filter:;<br /> filter:; <br />}');
         }
     }]);
 
