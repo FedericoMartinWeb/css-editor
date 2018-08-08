@@ -46,32 +46,32 @@
             </div>
             <div class="aside--item">
                 <div class="aside__title">Sepia</div>
-                <div class="slider" id="sepia-value-out" data-value='0'></div>
+                <input type="range" class="slider filters" value="0" max="100">
                 <div class="aside__number" id="sepia-value">0</div>
             </div>
             <div class="aside--item">
                 <div class="aside__title">Blur</div>
-                <div class="slider" id="blur-value-out" data-value='0'></div>
+                <input type="range" class="slider filters" value="0" max="10" step="0.01">
                 <div class="aside__number" id="blur-value">0</div>
             </div>
             <div class="aside--item">
                 <div class="aside__title">Brightness</div>
-                <div class="slider" id="bright-value-out" data-value='1'></div>
+               <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">
                 <div class="aside__number" id="bright-value">1</div>
             </div>
             <div class="aside--item">
                 <div class="aside__title">Grayscale</div>
-                <div class="slider" id="gray-value-out" data-value='0'></div>
+               <input type="range" class="slider filters" value="0" min="0" max="100">
                 <div class="aside__number" id="gray-value">0</div>
             </div>
             <div class="aside--item">
                 <div class="aside__title">Contrast</div>
-                <div class="slider" id="contrast-value-out" data-value='1'></div>
+               <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">
                 <div class="aside__number" id="contrast-value">1</div>
             </div>
             <div class="aside--item">
                 <div class="aside__title">Hue-rotate</div>
-                <div class="slider" id="hue-value-out" data-value='0'></div>
+               <input type="range" class="slider filters" value="0" min="0" max="360">
                 <div class="aside__number" id="hue-value">0</div>
             </div>
             <div class="aside--item">

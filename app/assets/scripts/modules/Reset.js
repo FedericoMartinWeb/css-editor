@@ -1,11 +1,10 @@
 import $ from 'jquery';
-import "jquery-ui-slider/jquery-ui.min";
 
 class Reset{
 
     constructor(){
         this.reset = $('#reset');
-        this.filters = $('.slider');
+        this.filters = $('.filters');
         this.divCode = $('.center--modal__code');
         this.events();
     }
@@ -15,9 +14,9 @@ class Reset{
     }
     
     CallReset(){
-        this.filtersval = this.filters.each(function(){
-            this.val = $(this).attr('data-value');
-            $(this).slider('value', this.val);
+        this.filters.each(function(){
+            this.val = $(this).attr('value');
+            $(this).val(this.val);
             $(this).next().html(this.val);
             $('style').remove();
         });

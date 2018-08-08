@@ -12,7 +12,6 @@ var item = new Items();
 var image = new UploadImage();
 var main = new Main();
 var cssgene = new CssGene();
-
 var slider = new Sliderui();
 var switchit = new Switch();
 var reset = new Reset();
