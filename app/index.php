@@ -81,11 +81,11 @@
         <article class="center">
             <div class="center--modal">
                 <div class="center--modal__wrapper-btn">
-                    <input type="button" value="Copy" class="center--modal__copy button button--wa">
+                    <input type="button" value="Copy" data-clipboard-action="copy" data-clipboard-target="#code" class="center--modal__copy button button--wa">
                     <input type="button" value="Close" class="center--modal__close button button--wa">
                 </div>
                 <div class="center--modal__init-code">&lt;!-- Add this class to your image! --&gt;</div>
-                <div class="center--modal__code"></div>
+                <div class="center--modal__code" id="code"></div>
             </div>
             <div class="center__img">
                 <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core filter" id="img">

@@ -2,6 +2,7 @@
   "name": "css-editor",
   "version": "1.0.0",
   "dependencies": {
+    "clipboard": "^2.0.1",
     "jquery": "^3.3.1",
     "jquery-ui-slider": "^1.12.1",
     "normalize.css": "7.0.0"
