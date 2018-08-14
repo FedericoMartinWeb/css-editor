@@ -88,7 +88,9 @@
                 <div class="center--modal__code" id="code"></div>
             </div>
             <div class="center__img">
-                <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core filter" id="img">
+                <div class="center__img--wrapper">
+                    <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core filter" id="img">                    
+                </div>
             </div>
         </article>
     </main>
