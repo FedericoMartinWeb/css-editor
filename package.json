@@ -5,7 +5,10 @@
     "clipboard": "^2.0.1",
     "jquery": "^3.3.1",
     "jquery-ui-slider": "^1.12.1",
-    "normalize.css": "7.0.0"
+    "normalize.css": "7.0.0",
+    "simple-scrollbar": "^0.4.0",
+    "simplebar": "^3.0.0-beta.3",
+    "ya-simple-scrollbar": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",

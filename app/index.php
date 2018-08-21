@@ -35,7 +35,7 @@
     <!-- Header End -->
 
     <main class="main-wrapper">
-        <aside class="aside">
+        <aside class="aside" data-simplebar>
             <div class="aside--modal"></div>
             <div class="aside--item">
                 <div class="aside--item--wrapper-file">
@@ -68,6 +68,31 @@
                 <div class="aside__title">Contrast</div>
                <input type="range" class="slider filters" value="1" min="0" max="3" step="0.01">
                 <div class="aside__number" id="contrast-value">1</div>
+            </div>
+            <div class="aside--item">
+                <div class="aside__title">Hue-rotate</div>
+               <input type="range" class="slider filters" value="0" min="0" max="360">
+                <div class="aside__number" id="hue-value">0</div>
+            </div>
+            <div class="aside--item">
+                <div class="aside__title">Hue-rotate</div>
+               <input type="range" class="slider filters" value="0" min="0" max="360">
+                <div class="aside__number" id="hue-value">0</div>
+            </div>
+            <div class="aside--item">
+                <div class="aside__title">Hue-rotate</div>
+               <input type="range" class="slider filters" value="0" min="0" max="360">
+                <div class="aside__number" id="hue-value">0</div>
+            </div>
+            <div class="aside--item">
+                <div class="aside__title">Hue-rotate</div>
+               <input type="range" class="slider filters" value="0" min="0" max="360">
+                <div class="aside__number" id="hue-value">0</div>
+            </div>
+            <div class="aside--item">
+                <div class="aside__title">Hue-rotate</div>
+               <input type="range" class="slider filters" value="0" min="0" max="360">
+                <div class="aside__number" id="hue-value">0</div>
             </div>
             <div class="aside--item">
                 <div class="aside__title">Hue-rotate</div>

@@ -7,6 +7,7 @@ import Reset from './modules/Reset';
 import Switch from './modules/Switch';
 import Sliderui from './modules/Sliderui';
 import ClipboardJS from 'clipboard';
+import 'simplebar';
 
 var close = new CloseAside();
 var item = new Items();

@@ -176,3 +176,7 @@
         }
     }
 }
+
+.simplebar-scrollbar{
+    width: 3px !important;
+}
