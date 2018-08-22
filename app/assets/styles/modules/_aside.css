@@ -37,7 +37,7 @@
 	}
     
     &--hide{
-        display: none;
+        display: none !important;
     }
     
     &--item{
@@ -180,3 +180,4 @@
 .simplebar-scrollbar{
     width: 3px !important;
 }
+

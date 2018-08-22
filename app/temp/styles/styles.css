@@ -663,7 +663,7 @@ a{
     }
 
 .aside--hide{
-        display: none;
+        display: none !important;
     }
 
 .aside--item{
