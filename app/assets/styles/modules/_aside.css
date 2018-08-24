@@ -143,34 +143,35 @@
                 content: ' ';
                 display: block;
                 position: absolute;
-                left: 7px;
-                top: 11px;
+                top: 5px;
+                left: 18px;
                 border-style: solid;
-                border-width: 10px 10px 0 10px;
-                border-color: #ff435f transparent transparent transparent;
+                border-width: 10px 0px 10px 10px;
+                border-color: transparent transparent transparent #ff435f;
+                
                 transition: all .2s ease-out;
             }
         }
 
         @mixin atMedium{
             &::before{
-                top: 19px;
+                top: 13px;
             }
         }
         
         &--animation{
             &::before{
-                top: 11px;
-                left: 15px;
-                border-width: 10px 0px 10px 10px;
-                border-color: transparent transparent transparent #ff435f;
+                top: 7px;
+                left: 11px;
+                border-width: 10px 10px 0 10px;
+                border-color: #ff435f transparent transparent transparent;
 
                 @mixin atSmall{
-                    top: 3px;
+                    top: 10px;
                 }
 
                 @mixin atMedium{
-                    top: 11px;
+                    top: 19px;
                 }
             }
         }

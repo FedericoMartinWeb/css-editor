@@ -75,29 +75,10 @@
                 <div class="aside__number" id="hue-value">0</div>
             </div>
             <div class="aside--item">
-                <div class="aside__title">Hue-rotate</div>
-               <input type="range" class="slider filters" value="0" min="0" max="360">
-                <div class="aside__number" id="hue-value">0</div>
-            </div>
-            <div class="aside--item">
-                <div class="aside__title">Hue-rotate</div>
-               <input type="range" class="slider filters" value="0" min="0" max="360">
-                <div class="aside__number" id="hue-value">0</div>
-            </div>
-            <div class="aside--item">
-                <div class="aside__title">Hue-rotate</div>
-               <input type="range" class="slider filters" value="0" min="0" max="360">
-                <div class="aside__number" id="hue-value">0</div>
-            </div>
-            <div class="aside--item">
-                <div class="aside__title">Hue-rotate</div>
-               <input type="range" class="slider filters" value="0" min="0" max="360">
-                <div class="aside__number" id="hue-value">0</div>
-            </div>
-            <div class="aside--item">
-                <div class="aside__title">Hue-rotate</div>
-               <input type="range" class="slider filters" value="0" min="0" max="360">
-                <div class="aside__number" id="hue-value">0</div>
+                <div class="aside__title">Overlay</div>
+                <span>None</span><input type="checkbox" class="slider filters">
+                <span>Solid Background</span><input type="checkbox" class="slider filters">
+                <span>Linear Gradient</span><input type="checkbox" class="slider filters">
             </div>
             <div class="aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">

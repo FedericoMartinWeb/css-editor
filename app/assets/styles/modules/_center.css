@@ -113,8 +113,8 @@
                 left: 0;
                 position: absolute;
                 pointer-events: none;
-                /*mix-blend-mode: multiply;
-                background: red;*/
+                mix-blend-mode: difference;
+                background: red;
             }
 
             &:hover{
@@ -128,7 +128,7 @@
             max-height: 100%; 
             object-fit: cover;
             opacity: 1;
-            /*mix-blend-mode: difference;*/
+            /* mix-blend-mode: difference; */
         }
     }
     
