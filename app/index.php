@@ -92,6 +92,9 @@
                 </div>
                 <div class="center--modal__init-code">&lt;!-- Add this class to your image! --&gt;</div>
                 <div class="center--modal__code" id="code"></div>
+                <div class="center--modal__init-code">&lt;!-- Markup --&gt;</div>
+                <div class="center--modal__code--markup">&lt;figure class='filter'&gt;<br><span style='margin-left:25px;'>&lt;img src='...'&gt;</span><br>&lt;/figure&gt;</div>
+                
             </div>
             <div class="center__img">
                 <div class="center__img--wrapper filter">
