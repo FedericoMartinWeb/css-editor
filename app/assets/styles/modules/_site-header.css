@@ -1,18 +1,14 @@
 .site-header{
 	width: 100vw;
 	height: 50px;
-	background-color: #184061;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
+	background-color: #2A3D45;
 	display: flex;
 	justify-content: center;
 	align-items: center;
     font-family: 'Source Code Pro', sans-serif;
     position: relative;
     box-shadow: 0px 2px 5px 0px rgba(21, 21, 21, .4);
-    z-index: 4;
+    z-index: 4;    
     
     &__menu-icon{
         width: 20px;
@@ -86,7 +82,7 @@
 	&__title{
 		margin: 0;
 		padding: 0;
-		color: #fff;
+		color: #FEFCFB;
         font-weight: 100;
         font-size: 15px;
         

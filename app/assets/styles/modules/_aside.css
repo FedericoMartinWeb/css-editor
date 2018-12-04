@@ -4,7 +4,7 @@
     font-size: 16px;
     letter-spacing: 1px;
     color: #fff;
-	background-color: #2C5476;
+	background-color: #2A3D45;
     transition: all .3s ease-out;
     height: calc(100vh - 50px);
 	grid-column: 9 / 13;
@@ -71,7 +71,8 @@
             }
 
             &--title{
-                background-color: rgb(72, 77, 77);
+                background-color: transparent;
+                border: 1px solid rgb(97, 97, 97);
                 color: #fff;
                 cursor: pointer;
                 display: inline-block;
@@ -79,7 +80,6 @@
                 width: 100%;
                 text-align: center;
                 transition: all .3s ease-out;
-                border: 1px solid transparent;
                 font-size: 13px;
             }
 
@@ -104,7 +104,7 @@
             justify-content: center;
             align-items: center;
             position: absolute;
-            background-color: rgba(72, 77, 77, .9);
+            background-color: #2A3D45;
             height: 18px;
             width: 34px;
             color: #fff;
@@ -147,7 +147,7 @@
                 left: 18px;
                 border-style: solid;
                 border-width: 10px 0px 10px 10px;
-                border-color: transparent transparent transparent #ff435f;
+                border-color: transparent transparent transparent rgb(97, 97, 97);
                 
                 transition: all .2s ease-out;
             }
@@ -164,7 +164,7 @@
                 top: 7px;
                 left: 11px;
                 border-width: 10px 10px 0 10px;
-                border-color: #ff435f transparent transparent transparent;
+                border-color: rgb(97, 97, 97) transparent transparent transparent;
 
                 @mixin atSmall{
                     top: 10px;

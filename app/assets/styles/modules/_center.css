@@ -1,6 +1,6 @@
 .center{
-	background-image: url('../../assets/images/black-paper.png');
-    background-color: #343434;
+	/* background-image: url('../../assets/images/black-paper.png'); */
+    background-color:  rgb(97, 97, 97);
     background-repeat: repeat;
 	grid-column: 1 / 9;
     order: 1;

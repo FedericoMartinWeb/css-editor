@@ -477,10 +477,7 @@ a{
 .site-header{
 	width: 100vw;
 	height: 50px;
-	background-color: #184061;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
+	background-color: #2A3D45;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -587,7 +584,7 @@ a{
 .site-header__title{
 		margin: 0;
 		padding: 0;
-		color: #fff;
+		color: #FEFCFB;
         font-weight: 100;
         font-size: 15px;
 	}
@@ -618,7 +615,7 @@ a{
     font-size: 16px;
     letter-spacing: 1px;
     color: #fff;
-	background-color: #2C5476;
+	background-color: #2A3D45;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     height: calc(100vh - 50px);
@@ -706,7 +703,8 @@ a{
                 }
 
 .aside--item--wrapper-file--title{
-                background-color: rgb(72, 77, 77);
+                background-color: transparent;
+                border: 1px solid rgb(97, 97, 97);
                 color: #fff;
                 cursor: pointer;
                 display: inline-block;
@@ -715,7 +713,6 @@ a{
                 text-align: center;
                 -webkit-transition: all .3s ease-out;
                 transition: all .3s ease-out;
-                border: 1px solid transparent;
                 font-size: 13px;
             }
 
@@ -747,7 +744,7 @@ a{
                 -ms-flex-align: center;
                     align-items: center;
             position: absolute;
-            background-color: rgba(72, 77, 77, .9);
+            background-color: #2A3D45;
             height: 18px;
             width: 34px;
             color: #fff;
@@ -800,7 +797,7 @@ a{
                 left: 18px;
                 border-style: solid;
                 border-width: 10px 0px 10px 10px;
-                border-color: transparent transparent transparent #ff435f;
+                border-color: transparent transparent transparent rgb(97, 97, 97);
                 
                 -webkit-transition: all .2s ease-out;
                 
@@ -818,7 +815,7 @@ a{
                 top: 7px;
                 left: 11px;
                 border-width: 10px 10px 0 10px;
-                border-color: #ff435f transparent transparent transparent;
+                border-color: rgb(97, 97, 97) transparent transparent transparent;
             }
 
 @media only screen and (min-width: 576px){
@@ -840,8 +837,8 @@ a{
 }
 
 .center{
-	background-image: url('../../assets/images/black-paper.png');
-    background-color: #343434;
+	/* background-image: url('../../assets/images/black-paper.png'); */
+    background-color:  rgb(97, 97, 97);
     background-repeat: repeat;
 	grid-column: 1 / 9;
     -webkit-box-ordinal-group: 2;
@@ -1144,16 +1141,14 @@ input[type=range].slider::-webkit-slider-runnable-track {
 }
 
 input[type=range].slider::-webkit-slider-thumb {
-  -webkit-box-shadow: 0px 0px 1px #670000, 0px 0px 0px #810000;
-          box-shadow: 0px 0px 1px #670000, 0px 0px 0px #810000;
   border: 0px solid #ff1e00;
-  height: 21px;
-  width: 13px;
-  border-radius: 0px;
-  background: rgba(255, 67, 95, 0.93);
+  height: 18px;
+  width: 18px;
+  border-radius: 20px;
+  background: rgb(97, 97, 97);
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -9.4px;
+  margin-top: -8px;
 }
 
 input[type=range].slider:focus::-webkit-slider-runnable-track {
@@ -1176,7 +1171,7 @@ input[type=range].slider::-moz-range-thumb {
   height: 21px;
   width: 13px;
   border-radius: 0px;
-  background: rgba(255, 67, 95, 0.93);
+  background: rgb(97, 97, 97);
   cursor: pointer;
 }
 
@@ -1209,7 +1204,7 @@ input[type=range].slider::-ms-thumb {
   height: 21px;
   width: 13px;
   border-radius: 0px;
-  background: rgba(255, 67, 95, 0.93);
+  background: rgb(97, 97, 97);
   cursor: pointer;
   height: 2.2px;
 }
@@ -1229,14 +1224,14 @@ input[type=range].slider:focus::-ms-fill-upper {
 .button{
 	font-family: 'Montserrat', sans-serif;
 	cursor: pointer;
-	background-color: rgb(72, 77, 77);
+  background-color: transparent;
+  border: 1px solid rgb(97, 97, 97);
 	letter-spacing: 1px;
 	color: #fff;
 	padding: 8px;
 	width: 100%;
 	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
-	border:1px solid transparent;
 	text-align: center;
 	white-space: pre-wrap;
 	font-size: 13px;
