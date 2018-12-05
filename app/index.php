@@ -32,7 +32,7 @@
     <main class="main-wrapper">
         <aside class="aside" data-simplebar>
             <div class="aside--modal"></div>
-            <!-- <h1 class="site-header__title">Css &lt;img&gt; Editor</h1> -->
+            <h1 class="aside__main-title">Css &lt;img&gt; Editor</h1>
             <div class="aside--item">
                 <div class="aside--item--wrapper-file">
                     <span class="aside--item--wrapper-file--title">Upload your image!</span>
@@ -81,13 +81,15 @@
             </div>
         </aside>
         <article class="center">
+        
         <header class="site-header">
-       <div class="site-header__menu-icon">
-           <div class="icon-wrapper">
-           <div class="site-header__menu-icon__middle"></div>
-           </div>
-       </div>   
-    </header>
+        <div class="icon-wrapper"></div>
+            <div class="site-header__menu-icon">
+                
+                <div class="site-header__menu-icon__middle"></div>
+                
+            </div>   
+        </header>
             <div class="center--modal">
                 <div class="center--modal__wrapper-btn">
                     <input type="button" value="Copy" data-clipboard-action="copy" data-clipboard-target="#code" class="center--modal__copy button button--wa">
