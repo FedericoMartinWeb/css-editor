@@ -4,9 +4,9 @@
     font-size: 16px;
     letter-spacing: 1px;
     color: #fff;
-	background-color: #2A3D45;
+	background-color: #182846ee;
     transition: all .3s ease-out;
-    height: calc(100vh - 50px);
+    height: 100vh;
 	grid-column: 9 / 13;
     order: 2;
     overflow-y: scroll;
@@ -72,7 +72,7 @@
 
             &--title{
                 background-color: transparent;
-                border: 1px solid rgb(97, 97, 97);
+                border: 1px solid #808A9F;
                 color: #fff;
                 cursor: pointer;
                 display: inline-block;
@@ -104,7 +104,7 @@
             justify-content: center;
             align-items: center;
             position: absolute;
-            background-color: #2A3D45;
+            background-color: transparent;
             height: 18px;
             width: 34px;
             color: #fff;
@@ -143,11 +143,11 @@
                 content: ' ';
                 display: block;
                 position: absolute;
-                top: 5px;
+                top: 8px;
                 left: 18px;
                 border-style: solid;
-                border-width: 10px 0px 10px 10px;
-                border-color: transparent transparent transparent rgb(97, 97, 97);
+                border-width: 7px 0px 7px 7px;
+                border-color: transparent transparent transparent #808A9F;
                 
                 transition: all .2s ease-out;
             }
@@ -155,7 +155,7 @@
 
         @mixin atMedium{
             &::before{
-                top: 13px;
+                top: 16px;
             }
         }
         
@@ -163,15 +163,15 @@
             &::before{
                 top: 7px;
                 left: 11px;
-                border-width: 10px 10px 0 10px;
-                border-color: rgb(97, 97, 97) transparent transparent transparent;
+                border-width: 7px 7px 0 7px;
+                border-color: #808A9F transparent transparent transparent;
 
                 @mixin atSmall{
-                    top: 10px;
+                    top: 13px;
                 }
 
                 @mixin atMedium{
-                    top: 19px;
+                    top: 22px;
                 }
             }
         }

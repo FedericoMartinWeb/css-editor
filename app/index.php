@@ -26,17 +26,13 @@
 <body>
     
     <!-- Header Start -->
-    <header class="site-header">
-       <div class="site-header__menu-icon">
-           <div class="site-header__menu-icon__middle"></div>
-       </div>
-        <h1 class="site-header__title">Css &lt;img&gt; Editor</h1>
-    </header>
+    
     <!-- Header End -->
 
     <main class="main-wrapper">
         <aside class="aside" data-simplebar>
             <div class="aside--modal"></div>
+            <!-- <h1 class="site-header__title">Css &lt;img&gt; Editor</h1> -->
             <div class="aside--item">
                 <div class="aside--item--wrapper-file">
                     <span class="aside--item--wrapper-file--title">Upload your image!</span>
@@ -74,17 +70,24 @@
                <input type="range" class="slider filters" value="0" min="0" max="360">
                 <div class="aside__number" id="hue-value">0</div>
             </div>
-            <div class="aside--item">
+            <!-- <div class="aside--item">
                 <div class="aside__title">Overlay</div>
                 <span>None</span><input type="checkbox" class="slider filters">
                 <span>Solid Background</span><input type="checkbox" class="slider filters">
                 <span>Linear Gradient</span><input type="checkbox" class="slider filters">
-            </div>
+            </div> -->
             <div class="aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">
             </div>
         </aside>
         <article class="center">
+        <header class="site-header">
+       <div class="site-header__menu-icon">
+           <div class="icon-wrapper">
+           <div class="site-header__menu-icon__middle"></div>
+           </div>
+       </div>   
+    </header>
             <div class="center--modal">
                 <div class="center--modal__wrapper-btn">
                     <input type="button" value="Copy" data-clipboard-action="copy" data-clipboard-target="#code" class="center--modal__copy button button--wa">
