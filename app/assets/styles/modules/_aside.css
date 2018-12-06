@@ -6,10 +6,9 @@
     color: #fff;
 	background-color: #182846ee;
     transition: all .3s ease-out;
-    height: 100vh;
-	grid-column: 9 / 13;
+	grid-column: 1 / 13;
     order: 2;
-    overflow-y: scroll;
+    
     position: relative;
     
     &--modal{
@@ -28,6 +27,8 @@
     }
     
     @mixin atSmall{
+        height: 100vh;
+        overflow-y: scroll;
         order: 1;
         grid-column: 1 / 5;
     }
