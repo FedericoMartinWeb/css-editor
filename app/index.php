@@ -11,6 +11,9 @@
     
     <!-- Styles css -->
     <link rel="stylesheet" href="../app/temp/styles/styles.css">
+
+    <!-- Icons -->
+    <link href="https://file.myfontastic.com/EtCKMx3SaBPvvQXwT9ZfxY/icons.css" rel="stylesheet">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
@@ -81,15 +84,6 @@
             </div>
         </aside>
         <article class="center">
-        
-        <header class="site-header">
-        <div class="icon-wrapper"></div>
-            <div class="site-header__menu-icon">
-                
-                <div class="site-header__menu-icon__middle"></div>
-                
-            </div>   
-        </header>
             <div class="center--modal">
                 <div class="center--modal__wrapper-btn">
                     <input type="button" value="Copy" data-clipboard-action="copy" data-clipboard-target="#code" class="center--modal__copy button button--wa">
