@@ -13,6 +13,7 @@ class Main{
        this.gray = $('#gray input');
        this.contrast = $('#contrast input');
        this.hue = $('#hue input');
+       this.inv = $('#invert-value input');
        this.events();
        this.mainHeght();
    }
@@ -47,8 +48,11 @@ class Main{
        this.hueval = this.hue.val();
        this.hue.next().html(this.hueval);
 
+       this.invalue = this.inv.val();
+       this.inv.next().html(this.invalue);
+
        this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale('+ this.grayval 
-        +'%) contrast(' + this.contrastval + ') hue-rotate(' + this.hueval + 'deg)');
+        +'%) contrast(' + this.contrastval + ') hue-rotate(' + this.hueval + 'deg)' + ') invert(' + this.invalue + ')');
    }
 }
 

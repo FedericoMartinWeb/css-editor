@@ -10773,28 +10773,9 @@ var Switch = function () {
             var gray = (0, _jquery2.default)('#gray-value').html();
             var contrast = (0, _jquery2.default)('#contrast-value').html();
             var hue = (0, _jquery2.default)('#hue-value').html();
+            var inv = (0, _jquery2.default)('#invert-value').html();
 
             var css = '.filter {\n';
-            css += '-webkit-filter:';
-            if (sepia != "0") {
-                css += ' sepia(' + sepia + '%)';
-            }
-            if (blur != "0") {
-                css += ' blur(' + blur + 'px)';
-            }
-            if (bright != "1") {
-                css += ' brightness(' + bright + ')';
-            }
-            if (gray != "0") {
-                css += ' grayscale(' + gray + '%)';
-            }
-            if (contrast != "1") {
-                css += ' contrast(' + contrast + ')';
-            }
-            if (hue != "0") {
-                css += ' hue-rotate(' + hue + 'deg)';
-            }
-            css += ';\n';
             css += 'filter:';
             if (sepia != "0") {
                 css += ' sepia(' + sepia + '%)';
@@ -10813,6 +10794,9 @@ var Switch = function () {
             }
             if (hue != "0") {
                 css += ' hue-rotate(' + hue + 'deg)';
+            }
+            if (inv != "0") {
+                css += ' invert(' + inv + ')';
             }
 
             css += ';\n}';
@@ -11106,6 +11090,7 @@ var Main = function () {
         this.gray = (0, _jquery2.default)('#gray input');
         this.contrast = (0, _jquery2.default)('#contrast input');
         this.hue = (0, _jquery2.default)('#hue input');
+        this.inv = (0, _jquery2.default)('#invert-value input');
         this.events();
         this.mainHeght();
     }
@@ -11144,7 +11129,10 @@ var Main = function () {
             this.hueval = this.hue.val();
             this.hue.next().html(this.hueval);
 
-            this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale(' + this.grayval + '%) contrast(' + this.contrastval + ') hue-rotate(' + this.hueval + 'deg)');
+            this.invalue = this.inv.val();
+            this.inv.next().html(this.invalue);
+
+            this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale(' + this.grayval + '%) contrast(' + this.contrastval + ') hue-rotate(' + this.hueval + 'deg)' + ') invert(' + this.invalue + ')');
         }
     }]);
 

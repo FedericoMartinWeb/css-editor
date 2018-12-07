@@ -75,14 +75,14 @@
             </div>
             <div class="aside--item">
                 <div class="aside__title">Invert</div>
-               <input type="range" class="slider filters" value="0" min="0" max="360">
-                <div class="aside__number" id="hue-value">0</div>
+               <input type="range" class="slider filters" value="0" min="0" max="1" step="0.01">
+                <div class="aside__number" id="invert-value">0</div>
             </div>
-            <div class="aside--item">
+            <!-- <div class="aside--item">
                 <div class="aside__title">Saturate</div>
                <input type="range" class="slider filters" value="0" min="0" max="360">
-                <div class="aside__number" id="hue-value">0</div>
-            </div>
+                <div class="aside__number" id="saturate-value">0</div>
+            </div> -->
             <!-- <div class="aside--item">
                 <div class="aside__title">Overlay</div>
                 <span>None</span><input type="checkbox" class="slider filters">
