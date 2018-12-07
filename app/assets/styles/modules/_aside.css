@@ -8,7 +8,6 @@
     transition: all .3s ease-out;
 	grid-column: 1 / 13;
     order: 2;
-    
     position: relative;
     
     &--modal{
@@ -26,7 +25,7 @@
         }
     }
     
-    @mixin atSmall{
+    @mixin atMedium{
         height: 100vh;
         overflow-y: scroll;
         order: 1;
@@ -64,11 +63,7 @@
     
     &--item{
         position: relative;
-        padding: 1rem .2rem 1rem .2rem;
-
-        @mixin atSmall{
-            padding: .5rem 2.5rem 1rem 2.5rem;
-        }
+        padding: .5rem 2.5rem 1rem 2.5rem;
         
         @mixin atMedium{
             padding: 1rem 3rem 1rem 2.5rem;
@@ -157,7 +152,16 @@
         font-size: 13px;
 
         &::before{
-            display: none;
+            content: ' ';
+                display: block;
+                position: absolute;
+                top: 8px;
+                left: 18px;
+                border-style: solid;
+                border-width: 7px 0px 7px 7px;
+                border-color: transparent transparent transparent #808A9F;
+                
+                transition: all .2s ease-out;
         }
         
         @mixin atSmall{

@@ -73,6 +73,16 @@
                <input type="range" class="slider filters" value="0" min="0" max="360">
                 <div class="aside__number" id="hue-value">0</div>
             </div>
+            <div class="aside--item">
+                <div class="aside__title">Invert</div>
+               <input type="range" class="slider filters" value="0" min="0" max="360">
+                <div class="aside__number" id="hue-value">0</div>
+            </div>
+            <div class="aside--item">
+                <div class="aside__title">Saturate</div>
+               <input type="range" class="slider filters" value="0" min="0" max="360">
+                <div class="aside__number" id="hue-value">0</div>
+            </div>
             <!-- <div class="aside--item">
                 <div class="aside__title">Overlay</div>
                 <span>None</span><input type="checkbox" class="slider filters">

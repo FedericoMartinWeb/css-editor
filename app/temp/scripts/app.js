@@ -11098,7 +11098,8 @@ var Main = function () {
 
         this.img = (0, _jquery2.default)('#img');
         this.filterinput = (0, _jquery2.default)('input[type=range]');
-        this.border = (0, _jquery2.default)('#border input');
+        this.mainh = (0, _jquery2.default)('.center');
+        this.aside = (0, _jquery2.default)('.aside');
         this.sepia = (0, _jquery2.default)('#sepia input');
         this.blur = (0, _jquery2.default)('#blur input');
         this.bright = (0, _jquery2.default)('#bright input');
@@ -11106,21 +11107,21 @@ var Main = function () {
         this.contrast = (0, _jquery2.default)('#contrast input');
         this.hue = (0, _jquery2.default)('#hue input');
         this.events();
+        this.mainHeght();
     }
 
     _createClass(Main, [{
         key: 'events',
         value: function events() {
-            this.border.on('input', this.callBorder.bind(this));
+            (0, _jquery2.default)(window).on('resize', this.mainHeght.bind(this));
             this.filterinput.on('input', this.filters.bind(this));
-            //       this.blur.on('input', this.callBlur.bind(this));
         }
     }, {
-        key: 'callBorder',
-        value: function callBorder() {
-            this.borderval = this.border.val();
-            this.border.next().html(this.borderval);
-            this.img.css('border-radius', this.borderval + 'px');
+        key: 'mainHeght',
+        value: function mainHeght() {
+            if (window.matchMedia('(max-width: 767px)').matches) {
+                this.aside.css('margin-top', this.mainh.height());
+            }
         }
     }, {
         key: 'filters',

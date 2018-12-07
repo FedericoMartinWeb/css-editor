@@ -5,7 +5,8 @@ class Main{
    constructor(){
        this.img = $('#img');
        this.filterinput = $('input[type=range]');
-       this.border = $('#border input');
+       this.mainh = $('.center');
+       this.aside = $('.aside');
        this.sepia = $('#sepia input');
        this.blur = $('#blur input');
        this.bright = $('#bright input');
@@ -13,18 +14,18 @@ class Main{
        this.contrast = $('#contrast input');
        this.hue = $('#hue input');
        this.events();
+       this.mainHeght();
    }
    
    events(){
-       this.border.on('input', this.callBorder.bind(this));
-       this.filterinput.on('input', this.filters.bind(this));
-//       this.blur.on('input', this.callBlur.bind(this));
+        $(window).on('resize', this.mainHeght.bind(this));
+        this.filterinput.on('input', this.filters.bind(this));
    }
    
-   callBorder(){
-       this.borderval = this.border.val();
-       this.border.next().html(this.borderval);
-       this.img.css('border-radius', this.borderval + 'px');
+   mainHeght(){
+        if (window.matchMedia('(max-width: 767px)').matches){
+            this.aside.css('margin-top', this.mainh.height());
+        }
    }
 
    filters(){

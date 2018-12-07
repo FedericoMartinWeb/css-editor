@@ -44,7 +44,7 @@
 
 input[type=range].slider {
   -webkit-appearance: none;
-  width: 95%;
+  width: 99%;
   margin: 22px 0px 7px 3px;
     
     @mixin atSmall{
