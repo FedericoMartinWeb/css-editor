@@ -78,17 +78,19 @@
                <input type="range" class="slider filters" value="0" min="0" max="1" step="0.01">
                 <div class="aside__number" id="invert-value">0</div>
             </div>
-            <!-- <div class="aside--item">
+            <div class="aside--item">
                 <div class="aside__title">Saturate</div>
-               <input type="range" class="slider filters" value="0" min="0" max="360">
-                <div class="aside__number" id="saturate-value">0</div>
-            </div> -->
-            <!-- <div class="aside--item">
-                <div class="aside__title">Overlay</div>
-                <span>None</span><input type="checkbox" class="slider filters">
-                <span>Solid Background</span><input type="checkbox" class="slider filters">
-                <span>Linear Gradient</span><input type="checkbox" class="slider filters">
-            </div> -->
+               <input type="range" class="slider filters" value="1" min="0" max="10" step="0.01">
+                <div class="aside__number" id="saturate-value">1</div>
+            </div>
+            <div class="aside--item">
+                <h3 class="aside--item--blend__title">Blend Modes</h3>
+            </div>
+            <div class="aside--item">
+                <span>Select color</span>
+                <input type="color">
+                <div class="blend-color">none</div>
+            </div>
             <div class="aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">
             </div>

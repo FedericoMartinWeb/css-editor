@@ -3,8 +3,8 @@ import $ from 'jquery';
 class Main{
 
    constructor(){
-       this.img = $('#img');
        this.filterinput = $('input[type=range]');
+       this.filtercolor = $('input[type=color]');
        this.mainh = $('.center');
        this.aside = $('.aside');
        this.sepia = $('#sepia input');
@@ -14,11 +14,13 @@ class Main{
        this.contrast = $('#contrast input');
        this.hue = $('#hue input');
        this.inv = $('#invert-value input');
+       this.sat = $('#saturate-value input');
        this.events();
    }
    
    events(){       
         this.filterinput.on('input', this.filters.bind(this));
+        this.filtercolor.on('input', this.blend.bind(this));
    }
 
    filters(){
@@ -42,9 +44,14 @@ class Main{
 
        this.invalue = this.inv.val();
        this.inv.next().html(this.invalue);
+       
+       this.satvalue = this.sat.val();
+       this.sat.next().html(this.satvalue);
 
-       this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale('+ this.grayval 
-        +'%) contrast(' + this.contrastval + ') hue-rotate(' + this.hueval + 'deg)' + ') invert(' + this.invalue + ')');
+   }
+
+   blend(){
+        $('.blend-color').html(this.filtercolor.val());
    }
 }
 

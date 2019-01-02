@@ -14,6 +14,8 @@ class Switch{
         var contrast = $('#contrast-value').html();
         var hue = $('#hue-value').html();
         var inv = $('#invert-value').html();
+        var sat = $('#saturate-value').html();        
+        var blendcolor = $('.blend-color').html();
         
         var css = '.filter {\n';
         css += 'filter:';
@@ -39,13 +41,24 @@ class Switch{
             css += ' invert('+inv+')';
         }
 
-        css += ';\n}';
+        if (sat!="1"){
+            css += ' saturate('+sat+')';
+        }
+
+        css += ';\n}\n\n';
+
+        var blend = '.filter::before {\n';
+        if (blendcolor !== "none"){
+            blend += 'background:' + blendcolor;
+        }
+
+        blend += ';\n}';
         
         var codeDiv = $('.center--modal__code');
-        codeDiv.html(css);
+        codeDiv.html(css + blend);
         
         $('style').remove();
-        $('head').append('<style type="text/css">' + css + '</style>');
+        $('head').append('<style type="text/css">' + css + blend + '</style>');
         return css;
     }
 }

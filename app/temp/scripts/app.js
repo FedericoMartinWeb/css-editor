@@ -10774,6 +10774,8 @@ var Switch = function () {
             var contrast = (0, _jquery2.default)('#contrast-value').html();
             var hue = (0, _jquery2.default)('#hue-value').html();
             var inv = (0, _jquery2.default)('#invert-value').html();
+            var sat = (0, _jquery2.default)('#saturate-value').html();
+            var blendcolor = (0, _jquery2.default)('.blend-color').html();
 
             var css = '.filter {\n';
             css += 'filter:';
@@ -10799,13 +10801,24 @@ var Switch = function () {
                 css += ' invert(' + inv + ')';
             }
 
-            css += ';\n}';
+            if (sat != "1") {
+                css += ' saturate(' + sat + ')';
+            }
+
+            css += ';\n}\n\n';
+
+            var blend = '.filter::before {\n';
+            if (blendcolor !== "none") {
+                blend += 'background:' + blendcolor;
+            }
+
+            blend += ';\n}';
 
             var codeDiv = (0, _jquery2.default)('.center--modal__code');
-            codeDiv.html(css);
+            codeDiv.html(css + blend);
 
             (0, _jquery2.default)('style').remove();
-            (0, _jquery2.default)('head').append('<style type="text/css">' + css + '</style>');
+            (0, _jquery2.default)('head').append('<style type="text/css">' + css + blend + '</style>');
             return css;
         }
     }]);
@@ -11080,8 +11093,8 @@ var Main = function () {
     function Main() {
         _classCallCheck(this, Main);
 
-        this.img = (0, _jquery2.default)('#img');
         this.filterinput = (0, _jquery2.default)('input[type=range]');
+        this.filtercolor = (0, _jquery2.default)('input[type=color]');
         this.mainh = (0, _jquery2.default)('.center');
         this.aside = (0, _jquery2.default)('.aside');
         this.sepia = (0, _jquery2.default)('#sepia input');
@@ -11091,6 +11104,7 @@ var Main = function () {
         this.contrast = (0, _jquery2.default)('#contrast input');
         this.hue = (0, _jquery2.default)('#hue input');
         this.inv = (0, _jquery2.default)('#invert-value input');
+        this.sat = (0, _jquery2.default)('#saturate-value input');
         this.events();
     }
 
@@ -11098,6 +11112,7 @@ var Main = function () {
         key: 'events',
         value: function events() {
             this.filterinput.on('input', this.filters.bind(this));
+            this.filtercolor.on('input', this.blend.bind(this));
         }
     }, {
         key: 'filters',
@@ -11123,7 +11138,13 @@ var Main = function () {
             this.invalue = this.inv.val();
             this.inv.next().html(this.invalue);
 
-            this.img.css('filter', 'sepia(' + this.sepiaval + '%) blur(' + this.blurval + 'px) brightness(' + this.brightval + ') grayscale(' + this.grayval + '%) contrast(' + this.contrastval + ') hue-rotate(' + this.hueval + 'deg)' + ') invert(' + this.invalue + ')');
+            this.satvalue = this.sat.val();
+            this.sat.next().html(this.satvalue);
+        }
+    }, {
+        key: 'blend',
+        value: function blend() {
+            (0, _jquery2.default)('.blend-color').html(this.filtercolor.val());
         }
     }]);
 
