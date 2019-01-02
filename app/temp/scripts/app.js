@@ -11092,21 +11092,12 @@ var Main = function () {
         this.hue = (0, _jquery2.default)('#hue input');
         this.inv = (0, _jquery2.default)('#invert-value input');
         this.events();
-        this.mainHeght();
     }
 
     _createClass(Main, [{
         key: 'events',
         value: function events() {
-            (0, _jquery2.default)(window).on('resize', this.mainHeght.bind(this));
             this.filterinput.on('input', this.filters.bind(this));
-        }
-    }, {
-        key: 'mainHeght',
-        value: function mainHeght() {
-            if (window.matchMedia('(max-width: 767px)').matches) {
-                this.aside.css('margin-top', this.mainh.height());
-            }
         }
     }, {
         key: 'filters',

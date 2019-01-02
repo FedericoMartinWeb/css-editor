@@ -9,6 +9,7 @@
 	grid-column: 1 / 13;
     order: 2;
     position: relative;
+    margin-top: 300px;
     
     &--modal{
         position: absolute;
@@ -24,8 +25,13 @@
             display: block;
         }
     }
+
+    @mixin atSmall{
+		margin-top: 400px;
+	}
     
     @mixin atMedium{
+        margin-top: 0;
         height: 100vh;
         overflow-y: scroll;
         order: 1;

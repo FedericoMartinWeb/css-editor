@@ -15,18 +15,10 @@ class Main{
        this.hue = $('#hue input');
        this.inv = $('#invert-value input');
        this.events();
-       this.mainHeght();
    }
    
-   events(){
-        $(window).on('resize', this.mainHeght.bind(this));
+   events(){       
         this.filterinput.on('input', this.filters.bind(this));
-   }
-   
-   mainHeght(){
-        if (window.matchMedia('(max-width: 767px)').matches){
-            this.aside.css('margin-top', this.mainh.height());
-        }
    }
 
    filters(){
