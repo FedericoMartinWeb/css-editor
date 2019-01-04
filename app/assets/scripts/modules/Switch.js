@@ -18,7 +18,7 @@ class Switch{
         // var blendcolor = $('.blend-color').html();
         
         var css = '.filter {\n';
-        css += 'filter:';
+        css += '    filter:';
         if (sepia!="0"){
             css += ' sepia('+sepia+'%)';
         }
@@ -47,17 +47,18 @@ class Switch{
 
         css += ';\n}\n\n';
 
-        
-        var blend = '.filter::before {\n';
-        if ($('.input-color').val() !== "#ffffff"){
-            blend += 'background:' + $('.input-color').val();
-            
+        if($('.input-color').val() === "#ffffff"){
+            var blend = "";
+        } else {
+            var blend = '.filter::before {\n';
+            blend += '    background: ' + $('.input-color').val();
+            blend += ';\n}';
         }
-        blend += ';\n}';
+        
         
         var codeDiv = $('.center--modal__code');
         codeDiv.html(css + blend);
-        
+
         $('style').remove();
         $('head').append('<style type="text/css">' + css + blend + '</style>');
         return css;

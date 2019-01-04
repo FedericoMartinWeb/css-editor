@@ -10778,7 +10778,7 @@ var Switch = function () {
             // var blendcolor = $('.blend-color').html();
 
             var css = '.filter {\n';
-            css += 'filter:';
+            css += '    filter:';
             if (sepia != "0") {
                 css += ' sepia(' + sepia + '%)';
             }
@@ -10807,11 +10807,13 @@ var Switch = function () {
 
             css += ';\n}\n\n';
 
-            var blend = '.filter::before {\n';
-            if ((0, _jquery2.default)('.input-color').val() !== "#ffffff") {
-                blend += 'background:' + (0, _jquery2.default)('.input-color').val();
+            if ((0, _jquery2.default)('.input-color').val() === "#ffffff") {
+                var blend = "";
+            } else {
+                var blend = '.filter::before {\n';
+                blend += '    background: ' + (0, _jquery2.default)('.input-color').val();
+                blend += ';\n}';
             }
-            blend += ';\n}';
 
             var codeDiv = (0, _jquery2.default)('.center--modal__code');
             codeDiv.html(css + blend);

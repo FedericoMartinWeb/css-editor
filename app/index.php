@@ -84,12 +84,12 @@
                 <div class="aside__number" id="saturate-value">1</div>
             </div>
             <div class="aside--item">
-                <h3 class="aside--item--blend__title">Blend Modes</h3>
+                Blend Modes
+                <input type="checkbox" id="blendcheck" value="Boat">
             </div>
             <div class="aside--item">
                 <span>Select color</span>
                 <input type="color" class="input-color" value="#ffffff">
-                
             </div>
             <div class="aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">

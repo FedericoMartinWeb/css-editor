@@ -14,8 +14,8 @@
 
     @mixin atSmall{
 		height: 400px;
-	}
-	
+    }
+    
     @mixin atMedium{
         order: 2;
         grid-column: 5 / 13;
