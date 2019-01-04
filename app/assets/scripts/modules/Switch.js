@@ -15,7 +15,7 @@ class Switch{
         var hue = $('#hue-value').html();
         var inv = $('#invert-value').html();
         var sat = $('#saturate-value').html();        
-        var blendcolor = $('.blend-color').html();
+        // var blendcolor = $('.blend-color').html();
         
         var css = '.filter {\n';
         css += 'filter:';
@@ -47,11 +47,12 @@ class Switch{
 
         css += ';\n}\n\n';
 
+        
         var blend = '.filter::before {\n';
-        if (blendcolor !== "none"){
-            blend += 'background:' + blendcolor;
+        if ($('.input-color').val() !== "#ffffff"){
+            blend += 'background:' + $('.input-color').val();
+            
         }
-
         blend += ';\n}';
         
         var codeDiv = $('.center--modal__code');

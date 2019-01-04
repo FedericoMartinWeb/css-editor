@@ -88,8 +88,8 @@
             </div>
             <div class="aside--item">
                 <span>Select color</span>
-                <input type="color">
-                <div class="blend-color">none</div>
+                <input type="color" class="input-color" value="#ffffff">
+                
             </div>
             <div class="aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">

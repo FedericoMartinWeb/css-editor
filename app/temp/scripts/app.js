@@ -10775,7 +10775,7 @@ var Switch = function () {
             var hue = (0, _jquery2.default)('#hue-value').html();
             var inv = (0, _jquery2.default)('#invert-value').html();
             var sat = (0, _jquery2.default)('#saturate-value').html();
-            var blendcolor = (0, _jquery2.default)('.blend-color').html();
+            // var blendcolor = $('.blend-color').html();
 
             var css = '.filter {\n';
             css += 'filter:';
@@ -10808,10 +10808,9 @@ var Switch = function () {
             css += ';\n}\n\n';
 
             var blend = '.filter::before {\n';
-            if (blendcolor !== "none") {
-                blend += 'background:' + blendcolor;
+            if ((0, _jquery2.default)('.input-color').val() !== "#ffffff") {
+                blend += 'background:' + (0, _jquery2.default)('.input-color').val();
             }
-
             blend += ';\n}';
 
             var codeDiv = (0, _jquery2.default)('.center--modal__code');
@@ -11076,10 +11075,8 @@ var copy = new _clipboard2.default('.center--modal__copy');
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+       value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _jquery = __webpack_require__(1);
 
@@ -11089,67 +11086,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Main = function () {
-    function Main() {
-        _classCallCheck(this, Main);
-
-        this.filterinput = (0, _jquery2.default)('input[type=range]');
-        this.filtercolor = (0, _jquery2.default)('input[type=color]');
-        this.mainh = (0, _jquery2.default)('.center');
-        this.aside = (0, _jquery2.default)('.aside');
-        this.sepia = (0, _jquery2.default)('#sepia input');
-        this.blur = (0, _jquery2.default)('#blur input');
-        this.bright = (0, _jquery2.default)('#bright input');
-        this.gray = (0, _jquery2.default)('#gray input');
-        this.contrast = (0, _jquery2.default)('#contrast input');
-        this.hue = (0, _jquery2.default)('#hue input');
-        this.inv = (0, _jquery2.default)('#invert-value input');
-        this.sat = (0, _jquery2.default)('#saturate-value input');
-        this.events();
-    }
-
-    _createClass(Main, [{
-        key: 'events',
-        value: function events() {
-            this.filterinput.on('input', this.filters.bind(this));
-            this.filtercolor.on('input', this.blend.bind(this));
-        }
-    }, {
-        key: 'filters',
-        value: function filters() {
-            this.sepiaval = this.sepia.val();
-            this.sepia.next().html(this.sepiaval);
-
-            this.blurval = this.blur.val();
-            this.blur.next().html(this.blurval);
-
-            this.brightval = this.bright.val();
-            this.bright.next().html(this.brightval);
-
-            this.grayval = this.gray.val();
-            this.gray.next().html(this.grayval);
-
-            this.contrastval = this.contrast.val();
-            this.contrast.next().html(this.contrastval);
-
-            this.hueval = this.hue.val();
-            this.hue.next().html(this.hueval);
-
-            this.invalue = this.inv.val();
-            this.inv.next().html(this.invalue);
-
-            this.satvalue = this.sat.val();
-            this.sat.next().html(this.satvalue);
-        }
-    }, {
-        key: 'blend',
-        value: function blend() {
-            (0, _jquery2.default)('.blend-color').html(this.filtercolor.val());
-        }
-    }]);
-
-    return Main;
-}();
+var Main = function Main() {
+       _classCallCheck(this, Main);
+};
 
 exports.default = Main;
 
@@ -11510,6 +11449,7 @@ var Sliderui = function () {
         _classCallCheck(this, Sliderui);
 
         this.Sliders();
+        this.Color();
     }
 
     _createClass(Sliderui, [{
@@ -11518,6 +11458,15 @@ var Sliderui = function () {
             (0, _jquery2.default)('.filters').each(function () {
                 (0, _jquery2.default)(this).on('input', function () {
                     (0, _jquery2.default)(this).next().text((0, _jquery2.default)(this).val());
+                    switchit.switch();
+                });
+            });
+        }
+    }, {
+        key: 'Color',
+        value: function Color() {
+            (0, _jquery2.default)('.input-color').each(function () {
+                (0, _jquery2.default)(this).on('input', function () {
                     switchit.switch();
                 });
             });
