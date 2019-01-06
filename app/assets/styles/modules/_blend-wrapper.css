@@ -1,0 +1,17 @@
+.blend-wrapper{
+    &__options{
+        background-color: red;
+        display: none;
+    }
+}
+
+.showHide{
+    display: block;
+}
+
+
+.killbg{
+    &:before{
+        background-color: #ff2200 !important;
+    }
+}
