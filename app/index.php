@@ -83,13 +83,34 @@
                <input type="range" class="slider filters" value="1" min="0" max="10" step="0.01">
                 <div class="aside__number" id="saturate-value">1</div>
             </div>
-            <div class="aside--item">
-                Blend Modes
-                <input type="checkbox" id="blendcheck" value="Boat">
-            </div>
-            <div class="aside--item">
-                <span>Select color</span>
-                <input type="color" class="input-color" value="#ffffff">
+            <div class="blend-wrapper">
+                <div class="aside--item">
+                    Blend Modes
+                    <input type="checkbox" id="blend-wrapper__check" value="Boat">
+                </div>
+                <div class="aside--item blend-wrapper__options">
+                    <span>Select color</span>
+                    <input type="color" class="input-color" value="#ff2200">
+                    <span>Mix Blend</span>
+                    <select class="blend-wrapper__select">
+                        <option value="normal">normal</option>
+                        <option value="multiply">multiply</option>
+                        <option value="screen" selected="selected">screen</option>
+                        <option value="overlay">overlay</option>
+                        <option value="darken">darken</option>
+                        <option value="lighten">lighten</option>
+                        <option value="color-dodge">color-dodge</option>
+                        <option value="color-burn">color-burn</option>
+                        <option value="hard-light">hard-light</option>
+                        <option value="soft-light">soft-light</option>
+                        <option value="difference">difference</option>
+                        <option value="exclusion">exclusion</option>
+                        <option value="hue">hue</option>
+                        <option value="saturation">saturation</option>
+                        <option value="color">color</option>
+                        <option value="luminosity">luminosity</option>
+                    </select>
+                </div>
             </div>
             <div class="aside--item">
                 <input type="button" id="reset" class="button" value="Reset!">

@@ -897,8 +897,8 @@ a{
                 left: 0;
                 position: absolute;
                 pointer-events: none;
-                /* mix-blend-mode: difference;
-                background: red; */
+                /* mix-blend-mode: difference; */
+                /* background-color: red; */
             }
 
 .center__img--wrapper:hover{
@@ -913,7 +913,6 @@ a{
             -o-object-fit: cover; 
                object-fit: cover;
             opacity: 1;
-            /* mix-blend-mode: difference; */
         }
 
 .center--modal{
@@ -1152,6 +1151,19 @@ input[type=range].slider::-moz-range-thumb {
     background: -webkit-radial-gradient(circle, #804e0f, #3b003b);
     background: radial-gradient(circle, #804e0f, #3b003b);
     mix-blend-mode: screen; }*/
+
+.blend-wrapper__options{
+        background-color: red;
+        display: none;
+    }
+
+.showHide{
+    display: block;
+}
+
+.killbg:before{
+        background-color: #ff2200 !important;
+    }
 
 [data-simplebar] {
     position: relative;

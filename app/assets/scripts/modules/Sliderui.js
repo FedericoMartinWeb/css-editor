@@ -19,8 +19,8 @@ class Sliderui{
     }
 
     Color(){
-        $('.input-color').each(function(){
-            $(this).on('input', function(){
+        $('.input-color, .blend-wrapper__select').each(function(){
+            $(this).on('change', function(){
                 switchit.switch();
             });
         });
