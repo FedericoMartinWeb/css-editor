@@ -86,12 +86,19 @@
             position: relative;
             width: 100%;
             margin-bottom: 10px;
-
-             &:hover{
-                .main-wrapper__aside--item--wrapper-file--title{
+            
+            
+            &:hover{
+                .aside--item--wrapper-file--title{
                     border-color: #ff435f;
                 }
+                
+                /* .icon-picture-streamline::before{
+                    background-color: red;
+                } */
             }
+
+            
 
             &--title{
                 background-color: transparent;

@@ -69,6 +69,11 @@
                 height: 100%;
                 top: 0;
                 left: 0;
+                transition: all .1s ease-out;
+
+                &:hover{
+                    background-color: transparent !important;
+                }
             }
 
             &:hover{

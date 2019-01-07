@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../app/temp/styles/styles.css">
 
     <!-- Icons -->
-    <link href="https://file.myfontastic.com/EtCKMx3SaBPvvQXwT9ZfxY/icons.css" rel="stylesheet">
+    <!-- <link href="https://file.myfontastic.com/EtCKMx3SaBPvvQXwT9ZfxY/icons.css" rel="stylesheet"> -->
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
@@ -38,10 +38,10 @@
             <h1 class="aside__main-title">Css &lt;img&gt; Editor</h1>
             <div class="aside--item">
                 <div class="aside--item--wrapper-file">
-                    <span class="aside--item--wrapper-file--title">Upload your image!</span>
+                    <span class="aside--item--wrapper-file--title icon-picture-streamline">Upload your image!</span>
                     <input type="file" class="aside--item--wrapper-file--core" id="uFile">
                 </div>
-                <input type="button" id="cssgene" class="button" value="Generate Css!">
+                <button type="button" id="cssgene" class="button icon-code">Generate Css!</button>
             </div>
             <div class="aside--item">
                 <div class="aside__title">Sepia</div>
@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="aside--item">
-                <input type="button" id="reset" class="button" value="Reset!">
+                </span><button type="button" id="reset" class="button icon-streamline-sync" value="Reset!">Reset!</button>
             </div>
         </aside>
         <article class="center">

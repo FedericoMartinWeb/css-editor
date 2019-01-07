@@ -19,7 +19,11 @@
 
 	&:hover{
 		border-color: #ff435f;
-	}
+  }
+  
+  &--generate{
+    /* position: relative; */
+  }
 }
 
 /*.toaster {
