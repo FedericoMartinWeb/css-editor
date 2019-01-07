@@ -6,21 +6,12 @@ class Sliderui{
 
     constructor(){
         this.Sliders();
-        this.Color();
     }
     
     Sliders(){
         $('.filters').each(function(){
             $(this).on('input', function(){
                 $(this).next().text($(this).val());
-                switchit.switch();
-            });
-        });
-    }
-
-    Color(){
-        $('.input-color, .blend-wrapper__select').each(function(){
-            $(this).on('change', function(){
                 switchit.switch();
             });
         });

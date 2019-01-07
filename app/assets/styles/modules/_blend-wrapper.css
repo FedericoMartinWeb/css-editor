@@ -8,10 +8,3 @@
 .showHide{
     display: block;
 }
-
-
-.killbg{
-    &:before{
-        background-color: #ff2200 !important;
-    }
-}

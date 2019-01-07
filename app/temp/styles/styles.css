@@ -888,17 +888,12 @@ a{
             transition: all .3s ease-out;
         }
 
-.center__img--wrapper:before{
-                content:'';
-                display: block;
-                height: 100%;
+.center__img--wrapper--blend{
+                position: absolute;
                 width: 100%;
+                height: 100%;
                 top: 0;
                 left: 0;
-                position: absolute;
-                pointer-events: none;
-                /* mix-blend-mode: difference; */
-                /* background-color: red; */
             }
 
 .center__img--wrapper:hover{
@@ -1160,10 +1155,6 @@ input[type=range].slider::-moz-range-thumb {
 .showHide{
     display: block;
 }
-
-.killbg:before{
-        background-color: #ff2200 !important;
-    }
 
 [data-simplebar] {
     position: relative;

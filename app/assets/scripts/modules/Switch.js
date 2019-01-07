@@ -44,24 +44,13 @@ class Switch{
             css += ' saturate('+sat+')';
         }
 
-        css += ';\n}\n\n';
+        css += ';\n}';
 
-        if($('.input-color').val() === "#ff2200"){
-            var blend = "";
-        } else { 
-            var blend = '.filter::before {\n';
-            blend += '    background: ' + $('.input-color').val();
-            blend += ';\n';
-            blend += '    mix-blend-mode: ' + $('.blend-wrapper__select').val();
-            blend += ';\n}';
-        }
-        
-        
         var codeDiv = $('.center--modal__code');
-        codeDiv.html(css + blend);
+        codeDiv.html(css);
 
         $('style').remove();
-        $('head').append('<style type="text/css">' + css + blend + '</style>');
+        $('head').append('<style type="text/css">' + css + '</style>');
         return css;
     }
 }
