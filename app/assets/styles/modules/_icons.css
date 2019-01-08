@@ -64,38 +64,45 @@ button[class*="icon-"]::before, span[class*="icon-"]::before{
 }
 
 .aside--item--wrapper-file:hover{
-    button[class*="icon-"]::before, span[class*="icon-"]::before{
+    span[class*="icon-"]::before{
         animation: jump .7s linear 1;  
     }
 }
 
+#reset:hover::before{
+  animation: rotate 2s infinite linear;
+}
+
+#cssgene:hover::before{
+  animation: jump .7s linear 1;  
+}
+
+
 @keyframes jump {
     0%{
-        -webkit-transform: translateY(0);
         transform: translateY(0);
       }
       20%{
-        -webkit-transform: translateY(0);
         transform: translateY(0);
       }
       40%{
-        -webkit-transform: translateY(-30%);
         transform: translateY(-30%);
       }
       50%{
-        -webkit-transform: translateY(0);
         transform: translateY(0);
       }
       60%{
-        -webkit-transform: translateY(-15%);
         transform: translateY(-15%);
       }
       80%{
-        -webkit-transform: translateY(0);
         transform: translateY(0);
       }
       100%{
-        -webkit-transform: translateY(0);
         transform: translateY(0);
       }
+}
+
+@keyframes rotate {
+  from {-webkit-transform: rotate(0deg);}
+  to   {-webkit-transform: rotate(359deg);}
 }

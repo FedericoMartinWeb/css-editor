@@ -611,7 +611,7 @@ a{
             }
 
 .aside--item--wrapper-file:hover .aside--item--wrapper-file--title{
-                    border-color: #ff435f;
+                    border-color: #A93F55;
                 }
 
 .aside--item--wrapper-file--title{
@@ -1178,7 +1178,7 @@ input[type=range].slider::-moz-range-thumb {
   }
 
 .button:hover{
-		border-color: #ff435f;
+		border-color: #A93F55;
   }
 
 .button--generate{
@@ -1300,71 +1300,91 @@ button[class*="icon-"]::before, span[class*="icon-"]::before{
     display: inline-block;    
 }
 
-.aside--item--wrapper-file:hover button[class*="icon-"]::before, .aside--item--wrapper-file:hover span[class*="icon-"]::before{
+.aside--item--wrapper-file:hover span[class*="icon-"]::before{
         -webkit-animation: jump .7s linear 1;
                 animation: jump .7s linear 1;  
     }
 
+#reset:hover::before{
+  -webkit-animation: rotate 2s infinite linear;
+          animation: rotate 2s infinite linear;
+}
+
+#cssgene:hover::before{
+  -webkit-animation: jump .7s linear 1;
+          animation: jump .7s linear 1;  
+}
+
 @-webkit-keyframes jump {
     0%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
       20%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
       40%{
         -webkit-transform: translateY(-30%);
-        transform: translateY(-30%);
+                transform: translateY(-30%);
       }
       50%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
       60%{
         -webkit-transform: translateY(-15%);
-        transform: translateY(-15%);
+                transform: translateY(-15%);
       }
       80%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
       100%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
 }
 
 @keyframes jump {
     0%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
       20%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
       40%{
         -webkit-transform: translateY(-30%);
-        transform: translateY(-30%);
+                transform: translateY(-30%);
       }
       50%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
       60%{
         -webkit-transform: translateY(-15%);
-        transform: translateY(-15%);
+                transform: translateY(-15%);
       }
       80%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
       100%{
         -webkit-transform: translateY(0);
-        transform: translateY(0);
+                transform: translateY(0);
       }
+}
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform: rotate(0deg);}
+  to   {-webkit-transform: rotate(359deg);}
+}
+
+@keyframes rotate {
+  from {-webkit-transform: rotate(0deg);}
+  to   {-webkit-transform: rotate(359deg);}
 }
 
 [data-simplebar] {
