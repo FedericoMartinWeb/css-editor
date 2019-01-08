@@ -38,21 +38,61 @@
     }
 
     &__img{
-        /*position: relative;*/
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--wrapper{
+
+            &--blend{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transition: all .1s ease-out;
+
+                &:hover{
+                    background-color: transparent !important;
+                }
+            }
+
+            &:hover{
+                filter: none !important;
+            }
+        }
+        
+        &--core{
+            display: block;
+            max-width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            transition: all .3s ease-out;
+            margin: 0 auto;
+            opacity: 1;
+
+            @mixin atSmall{
+                max-height: 350px;
+            }
+
+            @mixin atMedium{
+                max-height: 550px;
+            }
+
+            @mixin atXXLarge{
+                max-height: 800px;
+            }
+        }
+    }
+
+    /* &__img{
+        
         display: flex;
         justify-content: center;
         max-width: 100%;
         max-height: 100%;
-
-        /*&:after{
-            content:'';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: green;
-        }*/
 
         @mixin atSmall{
             max-width: 95%;
@@ -62,6 +102,8 @@
         &--wrapper{
             position: relative;
             transition: all .3s ease-out;
+            width: 100%;
+            max-height: 100%;
             
             &--blend{
                 position: absolute;
@@ -83,12 +125,13 @@
         
         &--core{
             display: block;
-            width: 100%;
-            height: 100%; 
+            max-width: 100%;
+            max-height: 100%;
             object-fit: cover;
             opacity: 1;
+            margin: 0 auto;
         }
-    }
+    } */
 
     &--modal{
         position: absolute;
@@ -185,4 +228,9 @@
             }
         }
     }*/
+}
+
+figure{
+    margin: 0;
+    position: relative;
 }

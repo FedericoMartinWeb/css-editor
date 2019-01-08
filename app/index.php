@@ -131,8 +131,11 @@
             </div>
             <div class="center__img">
                 <div class="center__img--wrapper filter">
+                    
+                    <figure>
                     <div class="center__img--wrapper--blend"></div>
-                    <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core" id="img">                    
+                    <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core" id="img">     
+                    </figure>
                 </div>
             </div>
         </article>
