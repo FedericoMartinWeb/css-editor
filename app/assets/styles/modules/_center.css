@@ -11,6 +11,7 @@
     top: 0;
     left: 0;
     height: 300px;
+    padding: 20px 0;
 
     @mixin atSmall{
 		height: 400px;
@@ -21,12 +22,13 @@
         grid-column: 5 / 13;
         height: 100vh;
         position: relative;
-        padding-top: 50px;
         background-color: #252627ea;
+        padding: 10px 20px;
     }
 
 	@mixin atLarge{
-		grid-column: 4 / 13;
+        grid-column: 4 / 13;
+        padding: 10px 50px;
 	}
     
     &--expand{
@@ -52,7 +54,7 @@
                 height: 100%;
                 top: 0;
                 left: 0;
-                transition: all .1s ease-out;
+                /* transition: all .1s ease-out; */
 
                 &:hover{
                     background-color: transparent !important;
@@ -82,7 +84,7 @@
             }
 
             @mixin atXXLarge{
-                max-height: 800px;
+                max-height: 780px;
             }
         }
     }
