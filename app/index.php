@@ -85,8 +85,11 @@
             </div>
             <div class="blend-wrapper">
                 <div class="aside--item">
-                    Blend Modes
-                    <input type="checkbox" id="blend-wrapper__check" value="Boat">
+                    Blend Modes                    
+                    <label class="check">
+                        <input type="checkbox" id="blend-wrapper__check"/>
+                        <div class="box"></div>
+                    </label>
                 </div>
                 <div class="aside--item blend-wrapper__options">
                     <span>Select color</span>
@@ -131,10 +134,9 @@
             </div>
             <div class="center__img">
                 <div class="center__img--wrapper filter">
-                    
                     <figure>
-                    <div class="center__img--wrapper--blend"></div>
-                    <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core" id="img">     
+                        <div class="center__img--wrapper--blend"></div>
+                        <img src="assets/images/preview_img.jpg" alt="userImg" class="center__img--core" id="img">     
                     </figure>
                 </div>
             </div>
