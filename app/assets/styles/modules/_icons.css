@@ -104,5 +104,5 @@ button[class*="icon-"]::before, span[class*="icon-"]::before{
 
 @keyframes rotate {
   from {-webkit-transform: rotate(0deg);}
-  to   {-webkit-transform: rotate(359deg);}
+  to   {-webkit-transform: rotate(-359deg);}
 }

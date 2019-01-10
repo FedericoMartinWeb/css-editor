@@ -11406,7 +11406,7 @@ var Reset = function () {
                 (0, _jquery2.default)(this).next().html(this.val);
                 (0, _jquery2.default)('style').remove();
             });
-            this.divCode.html('.filter { <br /> -webkit-filter:;<br /> filter:; <br />}');
+            this.divCode.html('.filter {<br />    filter:; <br />}');
         }
     }]);
 
@@ -11468,6 +11468,8 @@ var Blend = function () {
                 this.codedivblend.show();
                 this.wrapperblend.css('background-color', (0, _jquery2.default)('.input-color').val());
                 this.wrapperblend.css('mix-blend-mode', this.selectoptions.val());
+                this.codedivblend.css('padding', 15);
+                this.codedivblend.css('padding-top', 0);
                 this.codedivblend.html('<span class="newblend">.filter::before{<br>' + '&nbsp;&nbsp;&nbsp;&nbsp;' + (0, _jquery2.default)('.center__img--wrapper--blend').attr('style') + '\n}</span>');
             }
         }

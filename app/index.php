@@ -125,11 +125,13 @@
                     <input type="button" value="Copy" data-clipboard-action="copy" data-clipboard-target="#code" class="center--modal__copy button button--wa">
                     <input type="button" value="Close" class="center--modal__close button button--wa">
                 </div>
-                <div class="center--modal__init-code">&lt;!-- Add this class to your image! --&gt;</div>
-                <div class="center--modal__code" id="code"></div>
-                <div class="center--modal__blend" id="code"></div>
+                <div class="center--modal__init-code">&lt;!-- Css --&gt;</div>
+                <span id="code">
+                    <div class="center--modal__code" ></div>
+                    <div class="center--modal__blend"></div>
+                </span>
                 <div class="center--modal__init-code">&lt;!-- Markup --&gt;</div>
-                <div class="center--modal__code--markup">&lt;figure class='filter'&gt;<br><span style='margin-left:25px;'>&lt;img src='...'&gt;</span><br>&lt;/figure&gt;</div>
+                <div class="center--modal__code--markup">&lt;figure class='filter'&gt;<br><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='...'&gt;</span><br>&lt;/figure&gt;</div>
                 
             </div>
             <div class="center__img">

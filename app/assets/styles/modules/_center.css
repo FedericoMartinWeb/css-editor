@@ -158,22 +158,37 @@
         }
 
         &__init-code{
-            margin-top: 1rem;
+            padding-top: 40px;
             /* font-size: 14px; */
         }
 
         &__code{
-            margin-top: 1rem;            
+            margin-top: 16px;            
             white-space: pre-wrap;
-            background-color: rgb(72, 77, 77);
+            background-color: #0f1010;
             padding: 15px;
+            color: #a1acb9;
 
             &--markup{
-                background-color: rgb(72, 77, 77);
+                background-color: #0f1010;
                 padding: 15px;
                 margin-top: 1rem;
+                color: #a1acb9;
                 /* font-size: 14px; */
+
+                span{
+                    display: inline-block;                    
+                    margin: 2px 0;
+                }
             }
+        }
+
+        &__blend{
+            margin-top: 0;            
+            white-space: pre-wrap;
+            background-color: #0f1010;
+            padding: 0px;
+            color: #a1acb9;
         }
 
         &--show{
@@ -237,3 +252,4 @@ figure{
     margin: 0;
     position: relative;
 }
+

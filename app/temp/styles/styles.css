@@ -1008,23 +1008,39 @@ a{
         }
 
 .center--modal__init-code{
-            margin-top: 1rem;
+            padding-top: 40px;
             /* font-size: 14px; */
         }
 
 .center--modal__code{
-            margin-top: 1rem;            
+            margin-top: 16px;            
             white-space: pre-wrap;
-            background-color: rgb(72, 77, 77);
+            background-color: #0f1010;
             padding: 15px;
+            color: #a1acb9;
         }
 
 .center--modal__code--markup{
-                background-color: rgb(72, 77, 77);
+                background-color: #0f1010;
                 padding: 15px;
                 margin-top: 1rem;
-                /* font-size: 14px; */
+                color: #a1acb9;
             }
+
+/* font-size: 14px; */
+
+.center--modal__code--markup span{
+                    display: inline-block;                    
+                    margin: 2px 0;
+                }
+
+.center--modal__blend{
+            margin-top: 0;            
+            white-space: pre-wrap;
+            background-color: #0f1010;
+            padding: 0px;
+            color: #a1acb9;
+        }
 
 .center--modal--show{
             -webkit-transform: scale(1);
@@ -1448,12 +1464,12 @@ button[class*="icon-"]::before, span[class*="icon-"]::before{
 
 @-webkit-keyframes rotate {
   from {-webkit-transform: rotate(0deg);}
-  to   {-webkit-transform: rotate(359deg);}
+  to   {-webkit-transform: rotate(-359deg);}
 }
 
 @keyframes rotate {
   from {-webkit-transform: rotate(0deg);}
-  to   {-webkit-transform: rotate(359deg);}
+  to   {-webkit-transform: rotate(-359deg);}
 }
 
 [data-simplebar] {

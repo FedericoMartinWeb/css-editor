@@ -20,7 +20,7 @@ class Reset{
             $(this).next().html(this.val);
             $('style').remove();
         });
-        this.divCode.html('.filter { <br /> -webkit-filter:;<br /> filter:; <br />}');
+        this.divCode.html('.filter {<br />    filter:; <br />}');
     }
 }
 
