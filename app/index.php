@@ -16,7 +16,7 @@
     <!-- <link href="https://file.myfontastic.com/EtCKMx3SaBPvvQXwT9ZfxY/icons.css" rel="stylesheet"> -->
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
     
     <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -84,7 +84,7 @@
                 <div class="aside__number" id="saturate-value">1</div>
             </div>
             <div class="blend-wrapper">
-                <div class="aside--item">
+                <div class="aside--item blend-wrapper--less-pb">
                     Blend Modes                    
                     <label class="check">
                         <input type="checkbox" id="blend-wrapper__check"/>

@@ -2,11 +2,16 @@
     &__options{
         color: green !important;
         display: none;
+        user-select: none;
+    }
+
+    &--less-pb{
+      padding-bottom: 0.5em;
     }
 }
 
 .blend-wrapper .aside--item{
-    color: red;
+    color: #fff;
     font-size: 14px;
 }
 
@@ -17,12 +22,8 @@
 .check {
     width: 15px;
     height: 15px;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    position: absolute;
+    margin: auto auto auto 10px;
     
     input[type='checkbox'] {
       display: none;
@@ -39,8 +40,9 @@
       width: 100%;
       height: 100%;
       transition: all 1.1s cubic-bezier(.19,1,.22,1);
-      border: 2px solid transparent;
-      background-color: white;
+      border: 1px solid transparent;
+      background-color: #808A9F;
+      /* border-color: #A93F55; */
       position: relative;
       overflow: hidden;
       cursor: pointer;

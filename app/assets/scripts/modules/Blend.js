@@ -28,7 +28,7 @@ class Blend{
             this.codedivblend.show();
             this.wrapperblend.css('background-color', $('.input-color').val());
             this.wrapperblend.css('mix-blend-mode', this.selectoptions.val());
-            this.codedivblend.html('<span class="newblend">.filter::before{<br>' + $('.center__img--wrapper--blend').attr('style') + '\n}</span>');
+            this.codedivblend.html('<span class="newblend">.filter::before{<br>'+ '&nbsp;&nbsp;&nbsp;&nbsp;' + $('.center__img--wrapper--blend').attr('style') + '\n}</span>');
         }
     }
     

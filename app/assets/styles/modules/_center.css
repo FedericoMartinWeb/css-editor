@@ -140,7 +140,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #146645;
+        background-color: #182846;
         z-index: 3;
         transform: scale(0);
         transition: all .3s ease-out;
@@ -148,6 +148,8 @@
         padding: 2rem;
         color: #fff;
         transform-origin: left top;
+        font-size: 14px;
+        font-weight: 200;
         
         &__wrapper-btn{
             display: flex;
@@ -157,12 +159,11 @@
 
         &__init-code{
             margin-top: 1rem;
-            font-size: 14px;
+            /* font-size: 14px; */
         }
 
         &__code{
-            margin-top: 1rem;
-            font-size: 14px;
+            margin-top: 1rem;            
             white-space: pre-wrap;
             background-color: rgb(72, 77, 77);
             padding: 15px;
@@ -171,7 +172,7 @@
                 background-color: rgb(72, 77, 77);
                 padding: 15px;
                 margin-top: 1rem;
-                font-size: 14px;
+                /* font-size: 14px; */
             }
         }
 
