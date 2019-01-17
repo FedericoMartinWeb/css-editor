@@ -125,7 +125,7 @@
                     <input type="button" value="Copy" data-clipboard-action="copy" data-clipboard-target="#code" class="center--modal__copy button button--wa">
                     <input type="button" value="Close" class="center--modal__close button button--wa">
                 </div>
-                <div class="center--modal__init-code">&lt;!-- Css --&gt;</div>
+                <div class="center--modal__init-code">/* Css */</div>
                 <span id="code">
                     <div class="center--modal__code" ></div>
                     <div class="center--modal__blend"></div>
