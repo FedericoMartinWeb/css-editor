@@ -4,6 +4,10 @@
     border: none;
 }
 
+input[type=range]::-moz-focus-outer {
+    border: 0 !important;
+}
+
 body{
     overflow-x: hidden;
 }
