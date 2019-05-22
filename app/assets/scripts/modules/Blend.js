@@ -9,12 +9,14 @@ class Blend{
         this.wrapperblend = $('.center__img--wrapper--blend');
         this.codedivblend = $('.center--modal__blend');
         this.inputopacity = $('.blend-wrapper__options__opacity input');
+        this.reset = $('#reset');
         this.events();
     }
     
     events(){
         this.inputcheck.on('click', this.BlendCheck.bind(this));
         $('.input-color, .blend-wrapper__select, .blend-wrapper__options__opacity input').on('input', this.SelectOptions.bind(this));
+        this.reset.on('click', this.ResetBlend.bind(this))
     }
     
     BlendCheck(){        
@@ -32,7 +34,7 @@ class Blend{
             this.wrapperblend.css('mix-blend-mode', this.selectoptions.val());
             this.codedivblend.css('padding', 15);
             this.codedivblend.css('padding-top', 0);
-            this.codedivblend.html('<span class="newblend">.filter::before{<br>'+ '&nbsp;&nbsp;&nbsp;&nbsp;' + $('.center__img--wrapper--blend').attr('style') + '\n}</span>');
+            this.codedivblend.html('<span class="newblend">.filter::before{<br>'+ '&nbsp;&nbsp;&nbsp;&nbsp;' + $('.center__img--wrapper--blend').attr('style') + '\n}</span>'); 
         }
     }
     
@@ -42,6 +44,15 @@ class Blend{
         this.wrapperblend.css('mix-blend-mode', this.selectoptions.val());
         $('.newblend').remove();
         this.codedivblend.html('<span class="newblend">.filter::before{<br>' + $('.center__img--wrapper--blend').attr('style') + '<br>}</span>');
+    }
+
+    ResetBlend(){  
+        if(this.blendoptions.hasClass('showHide')){
+            this.wrapperblend.removeAttr('style');
+            this.codedivblend.hide();
+            this.blendoptions.removeClass('showHide');
+            this.inputcheck.prop('checked', false);
+        }    
     }
 }
 

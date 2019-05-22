@@ -11446,6 +11446,7 @@ var Blend = function () {
         this.wrapperblend = (0, _jquery2.default)('.center__img--wrapper--blend');
         this.codedivblend = (0, _jquery2.default)('.center--modal__blend');
         this.inputopacity = (0, _jquery2.default)('.blend-wrapper__options__opacity input');
+        this.reset = (0, _jquery2.default)('#reset');
         this.events();
     }
 
@@ -11454,6 +11455,7 @@ var Blend = function () {
         value: function events() {
             this.inputcheck.on('click', this.BlendCheck.bind(this));
             (0, _jquery2.default)('.input-color, .blend-wrapper__select, .blend-wrapper__options__opacity input').on('input', this.SelectOptions.bind(this));
+            this.reset.on('click', this.ResetBlend.bind(this));
         }
     }, {
         key: 'BlendCheck',
@@ -11483,6 +11485,16 @@ var Blend = function () {
             this.wrapperblend.css('mix-blend-mode', this.selectoptions.val());
             (0, _jquery2.default)('.newblend').remove();
             this.codedivblend.html('<span class="newblend">.filter::before{<br>' + (0, _jquery2.default)('.center__img--wrapper--blend').attr('style') + '<br>}</span>');
+        }
+    }, {
+        key: 'ResetBlend',
+        value: function ResetBlend() {
+            if (this.blendoptions.hasClass('showHide')) {
+                this.wrapperblend.removeAttr('style');
+                this.codedivblend.hide();
+                this.blendoptions.removeClass('showHide');
+                this.inputcheck.prop('checked', false);
+            }
         }
     }]);
 

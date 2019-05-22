@@ -32,6 +32,10 @@
     }
 }
 
+.input-color{
+  cursor: pointer;
+}
+
 .blend-wrapper .aside--item{
     color: #fff;
     font-size: 14px;

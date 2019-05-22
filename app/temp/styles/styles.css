@@ -705,9 +705,8 @@ a{
                 border-style: solid;
                 border-width: 7px 0px 7px 7px;
                 border-color: transparent transparent transparent #808A9F;
-                
+                cursor: default;
                 -webkit-transition: all .2s ease-out;
-                
                 transition: all .2s ease-out;
         }
 
@@ -1073,54 +1072,11 @@ figure{
     position: relative;
 }
 
-/*
-.aside--item .slider{
-    width: 83%;
-    height: 2px;
-    cursor: pointer;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #484d4d;
-    border-radius: 0px;
-    border: 0px solid #010101;
-    -webkit-appearance: none;
-    margin: 22px 0px 7px 16px;
-
-    @mixin atSmall{
-        width: 100%;
-        margin: 24px 0 7px 0;
-    }
-    
-    &--hide{
-        display: none;
-    }
-
-    &:focus{
-        outline: none;
-    }
-    
-    span{
-        &:focus{
-            outline: none;
-        }
-        
-        box-shadow: 0px 0px 1px #670000, 0px 0px 0px #810000;
-        border: 0px solid #ff1e00;
-        height: 20px;
-        width: 13px;
-        border-radius: 0px;
-        background: rgba(255, 67, 95, 0.93);
-        cursor: pointer;
-        -webkit-appearance: none;
-        margin-top: -8.9px;
-        top: 0;
-    }
-}
-*/
-
 input[type=range].slider {
   -webkit-appearance: none;
   width: 99%;
   margin: 22px 0px 7px 3px;
+  cursor: default;
 }
 
 @media only screen and (min-width: 576px){
@@ -1141,6 +1097,7 @@ input[type=range].slider::-webkit-slider-runnable-track {
   cursor: pointer;
   background: #808A9F;
   border-radius: 0px;
+  cursor: default;
 }
 
 input[type=range].slider::-webkit-slider-thumb {
@@ -1150,7 +1107,7 @@ input[type=range].slider::-webkit-slider-thumb {
   background-color: #808A9F;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -8px;  
+  margin-top: -8px; 
 }
 
 input[type=range].slider::-moz-range-track {
@@ -1158,6 +1115,7 @@ input[type=range].slider::-moz-range-track {
   height: 2.2px;
   cursor: pointer;
   background: red;
+  cursor: default;
 }
 
 input[type=range].slider::-moz-range-thumb {
@@ -1284,6 +1242,10 @@ input[type=range].slider::-moz-range-thumb {
 .blend-wrapper--less-pb{
       padding-bottom: 0.5em;
     }
+
+.input-color{
+  cursor: pointer;
+}
 
 .blend-wrapper .aside--item{
     color: #fff;
