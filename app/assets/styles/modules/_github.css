@@ -1,0 +1,13 @@
+.github{
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.icon-social-github{
+  text-decoration: none;
+  color: #808A9F;
+}
+
+.icon-social-github:before{
+  font-size: 60px !important;
+}

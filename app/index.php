@@ -130,6 +130,10 @@
             <div class="aside--item">
                 </span><button type="button" id="reset" class="button icon-streamline-sync" value="Reset!">Reset!</button>
             </div>
+
+            <div class="aside--item github">
+                <a href="https://github.com/FedericoMartinWeb/css-editor" target="_blank" class="icon-social-github"></a>
+            </div>
         </aside>
         <article class="center">
             <div class="center--modal">

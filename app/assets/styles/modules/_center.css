@@ -89,52 +89,6 @@
         }
     }
 
-    /* &__img{
-        
-        display: flex;
-        justify-content: center;
-        max-width: 100%;
-        max-height: 100%;
-
-        @mixin atSmall{
-            max-width: 95%;
-            max-height: 95%;
-        }
-
-        &--wrapper{
-            position: relative;
-            transition: all .3s ease-out;
-            width: 100%;
-            max-height: 100%;
-            
-            &--blend{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                transition: all .1s ease-out;
-
-                &:hover{
-                    background-color: transparent !important;
-                }
-            }
-
-            &:hover{
-                filter: none !important;
-            }
-        }
-        
-        &--core{
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-            opacity: 1;
-            margin: 0 auto;
-        }
-    } */
-
     &--modal{
         position: absolute;
         top: 0;
@@ -207,45 +161,6 @@
             width: 40%;
         }
     }
-    
-    /*&__img{
-        max-width: 100%;
-        height: 100%;
-        
-        @mixin atSmall{
-            max-width: 90%;
-            height: 90%;
-            display: flex;
-            align-items: center;
-        }
-
-        &--wrapper{
-            width: 100%;
-            height: 100%;
-            background-color: green;
-        }
-        
-        &--core{
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-            margin-top: calc(50vh - 50px);
-            transform: translateY(-50%);
-            object-fit: cover;
-            transition: all .3s ease-out;
-            opacity: .2;
-            
-            @mixin atSmall{
-                margin-top: 0;
-                transform: none;
-            }
-
-            &:hover{
-                border-radius: 0 !important;
-                filter: none !important;
-            }
-        }
-    }*/
 }
 
 figure{

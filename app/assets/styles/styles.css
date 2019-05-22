@@ -1,7 +1,6 @@
 @import 'normalize.css';
 @import 'base/_mixins.css';
 @import 'base/_global.css';
-@import 'modules/_site-header.css';
 @import 'modules/_main-wrapper.css';
 @import 'modules/_aside.css';
 @import 'modules/_center.css';
@@ -10,4 +9,5 @@
 @import 'modules/_blend-wrapper.css';
 @import 'modules/_icons.css';
 @import 'modules/_select-main.css';
+@import 'modules/_github.css';
 @import 'simplebar/dist/simplebar.css';
