@@ -10,7 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Styles css -->
+    <!-- build:css ./assets/styles/styles.css -->
     <link rel="stylesheet" href="../app/temp/styles/styles.css">
+    <!-- endbuild -->
 
     <!-- Icons -->
     <!-- <link href="https://file.myfontastic.com/EtCKMx3SaBPvvQXwT9ZfxY/icons.css" rel="stylesheet"> -->
@@ -162,7 +164,9 @@
     </main>
 
     <!-- Scripts -->
+    <!-- build:js ./assets/scripts/app.js --> 
     <script src="temp/scripts/App.js"></script>
+    <!-- endbuild -->
    
 </body>
 </html>
