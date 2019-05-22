@@ -11445,6 +11445,7 @@ var Blend = function () {
         this.selectoptions = (0, _jquery2.default)('.blend-wrapper__select');
         this.wrapperblend = (0, _jquery2.default)('.center__img--wrapper--blend');
         this.codedivblend = (0, _jquery2.default)('.center--modal__blend');
+        this.inputopacity = (0, _jquery2.default)('.blend-wrapper__options__opacity input');
         this.events();
     }
 
@@ -11452,7 +11453,7 @@ var Blend = function () {
         key: 'events',
         value: function events() {
             this.inputcheck.on('click', this.BlendCheck.bind(this));
-            (0, _jquery2.default)('.input-color, .blend-wrapper__select').on('input', this.SelectOptions.bind(this));
+            (0, _jquery2.default)('.input-color, .blend-wrapper__select, .blend-wrapper__options__opacity input').on('input', this.SelectOptions.bind(this));
         }
     }, {
         key: 'BlendCheck',
@@ -11467,6 +11468,7 @@ var Blend = function () {
             if (this.blendoptions.hasClass('showHide')) {
                 this.codedivblend.show();
                 this.wrapperblend.css('background-color', (0, _jquery2.default)('.input-color').val());
+                this.wrapperblend.css('opacity', this.inputopacity.val());
                 this.wrapperblend.css('mix-blend-mode', this.selectoptions.val());
                 this.codedivblend.css('padding', 15);
                 this.codedivblend.css('padding-top', 0);
@@ -11477,6 +11479,7 @@ var Blend = function () {
         key: 'SelectOptions',
         value: function SelectOptions() {
             this.wrapperblend.css('background-color', (0, _jquery2.default)('.input-color').val());
+            this.wrapperblend.css('opacity', this.inputopacity.val());
             this.wrapperblend.css('mix-blend-mode', this.selectoptions.val());
             (0, _jquery2.default)('.newblend').remove();
             this.codedivblend.html('<span class="newblend">.filter::before{<br>' + (0, _jquery2.default)('.center__img--wrapper--blend').attr('style') + '<br>}</span>');

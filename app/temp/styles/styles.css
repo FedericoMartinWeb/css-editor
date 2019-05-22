@@ -1268,10 +1268,6 @@ input[type=range].slider::-moz-range-thumb {
         }
     }
 
-.blend-wrapper__options__select{
-          margin-bottom: 0;
-        }
-
 .blend-wrapper__options__input input{
             background-color: transparent;
             border: 0;

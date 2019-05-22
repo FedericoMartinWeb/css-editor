@@ -103,12 +103,12 @@
                         <select class="blend-wrapper__select select-main">
                             <option value="normal">normal</option>
                             <option value="multiply">multiply</option>
-                            <option value="screen" selected="selected">screen</option>
+                            <option value="screen">screen</option>
                             <option value="overlay">overlay</option>
                             <option value="darken">darken</option>
                             <option value="lighten">lighten</option>
                             <option value="color-dodge">color-dodge</option>
-                            <option value="color-burn">color-burn</option>
+                            <option value="color-burn" selected="selected">color-burn</option>
                             <option value="hard-light">hard-light</option>
                             <option value="soft-light">soft-light</option>
                             <option value="difference">difference</option>
@@ -118,6 +118,11 @@
                             <option value="color">color</option>
                             <option value="luminosity">luminosity</option>
                         </select>
+                    </div>
+
+                    <div class="blend-wrapper__options__opacity">
+                        <span>Opacity</span>
+                        <input type="range" class="slider filters" value=".70" min="0" max="1" step="0.01">
                     </div>
 
                 </div>

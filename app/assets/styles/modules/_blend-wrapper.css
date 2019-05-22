@@ -14,10 +14,6 @@
           }
         }
 
-        &__select{
-          margin-bottom: 0;
-        }
-
         &__input{
           input{
             background-color: transparent;
