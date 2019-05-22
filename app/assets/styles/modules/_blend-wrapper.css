@@ -1,8 +1,34 @@
 .blend-wrapper{
     &__options{
-        color: green !important;
         display: none;
         user-select: none;
+
+        &__input, &__select{
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          @mixin atMedium{
+            justify-content: space-between;
+          }
+        }
+
+        &__select{
+          margin-bottom: 0;
+        }
+
+        &__input{
+          input{
+            background-color: transparent;
+            border: 0;
+            margin-left: 20px;
+
+            @mixin atMedium{
+              margin-left: 0;
+            }
+          }
+        }
     }
 
     &--less-pb{

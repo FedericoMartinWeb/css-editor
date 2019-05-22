@@ -92,27 +92,34 @@
                     </label>
                 </div>
                 <div class="aside--item blend-wrapper__options">
-                    <span>Select color</span>
-                    <input type="color" class="input-color" value="#ff2200">
-                    <span>Mix Blend</span>
-                    <select class="blend-wrapper__select">
-                        <option value="normal">normal</option>
-                        <option value="multiply">multiply</option>
-                        <option value="screen" selected="selected">screen</option>
-                        <option value="overlay">overlay</option>
-                        <option value="darken">darken</option>
-                        <option value="lighten">lighten</option>
-                        <option value="color-dodge">color-dodge</option>
-                        <option value="color-burn">color-burn</option>
-                        <option value="hard-light">hard-light</option>
-                        <option value="soft-light">soft-light</option>
-                        <option value="difference">difference</option>
-                        <option value="exclusion">exclusion</option>
-                        <option value="hue">hue</option>
-                        <option value="saturation">saturation</option>
-                        <option value="color">color</option>
-                        <option value="luminosity">luminosity</option>
-                    </select>
+                    
+                    <div class="blend-wrapper__options__input">
+                        <span>Select color</span>
+                        <input type="color" class="input-color" value="#ff2200">
+                    </div>
+
+                    <div class="blend-wrapper__options__select">
+                        <span>Mix Blend</span>
+                        <select class="blend-wrapper__select select-main">
+                            <option value="normal">normal</option>
+                            <option value="multiply">multiply</option>
+                            <option value="screen" selected="selected">screen</option>
+                            <option value="overlay">overlay</option>
+                            <option value="darken">darken</option>
+                            <option value="lighten">lighten</option>
+                            <option value="color-dodge">color-dodge</option>
+                            <option value="color-burn">color-burn</option>
+                            <option value="hard-light">hard-light</option>
+                            <option value="soft-light">soft-light</option>
+                            <option value="difference">difference</option>
+                            <option value="exclusion">exclusion</option>
+                            <option value="hue">hue</option>
+                            <option value="saturation">saturation</option>
+                            <option value="color">color</option>
+                            <option value="luminosity">luminosity</option>
+                        </select>
+                    </div>
+
                 </div>
             </div>
             <div class="aside--item">

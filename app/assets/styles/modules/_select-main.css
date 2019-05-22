@@ -1,0 +1,22 @@
+.select-main{
+  width: 120px;
+  background-color: #fff;
+  background-image: none;
+  border: 0;
+  border-bottom: 1px solid #808A9F;
+  border-radius: 0;
+  -webkit-appearance: none;
+  text-indent: 2px;
+  background: transparent url("https://img.icons8.com/ios/24/000000/sort-down.png") no-repeat 99% 0px;
+  background-size: 16px;
+  font-size: 13px;
+  color: #fff;
+  padding-bottom: 5px;
+  cursor: pointer;
+
+  margin-left: 20px;
+
+  @mixin atMedium{
+    margin-left: 0;
+  }
+}
