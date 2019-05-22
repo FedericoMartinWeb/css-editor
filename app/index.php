@@ -8,6 +8,8 @@
     <meta name="description" content="Desarrollo profesional de sitios web, 100% adaptables a todos los dispositivos">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Styles css -->
     <!-- build:css ./assets/styles/styles.css -->
