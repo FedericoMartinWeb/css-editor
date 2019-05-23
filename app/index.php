@@ -5,7 +5,13 @@
     <title>Css Editor</title>
     
     <!-- Meta tags -->
-    <meta name="description" content="Desarrollo profesional de sitios web, 100% adaptables a todos los dispositivos">
+    <meta name="description" content="Css image filter generator">
+    <meta property="og:image" content="og.png" />
+    <meta property="og:title" content="Css editor" />
+    <meta property="og:description" content="Css image filter generator" />
+    <meta property="og:url" content="https://www.csseditor.io/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
