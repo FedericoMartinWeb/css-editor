@@ -6,7 +6,7 @@
     
     <!-- Meta tags -->
     <meta name="description" content="Css image filter generator">
-    <meta property="og:image" content="og.png" />
+    <meta property="og:image" content="http://www.csseditor.io/og.png?hjkhad" />
     <meta property="og:title" content="Css editor" />
     <meta property="og:description" content="Css image filter generator" />
     <meta property="og:url" content="https://www.csseditor.io/" />
